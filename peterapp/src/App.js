@@ -6,6 +6,8 @@ import logo from './logo.svg';
 
 import './App.css';
 import MediaCard from './components/cards'
+import LogIn from './components/LogIn/LogIn'
+import Registration from './components/Registration/Registration'
 import Grid from '@material-ui/core/Grid';
 
 
@@ -23,8 +25,8 @@ function App() {
   <MediaCard />
   <MediaCard />
   <MediaCard />
-
-
+    <LogIn />
+    <Registration />
     </div>
   </Grid>
   );
