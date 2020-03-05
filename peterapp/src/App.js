@@ -1,4 +1,9 @@
 import React from 'react';
+
+
+import logo from './logo.svg';
+
+
 import './App.css';
 import MediaCard from './components/cards'
 import Grid from '@material-ui/core/Grid';
@@ -21,10 +26,12 @@ function App() {
   
     <Navbar />
     <div className="App">
-      
-  {/* <MediaCard />
+
   <MediaCard />
-  <MediaCard /> */}
+  <MediaCard />
+  <MediaCard />
+
+
     </div>
     <PersonalPage/>
   </Grid>
