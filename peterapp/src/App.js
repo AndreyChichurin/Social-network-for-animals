@@ -1,34 +1,30 @@
 import React from 'react';
-
-
-import logo from './logo.svg';
-
-
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import './App.css';
-import MediaCard from './components/cards'
-import LogIn from './components/LogIn/LogIn'
-import Registration from './components/Registration/Registration'
+
 import Grid from '@material-ui/core/Grid';
+
+import Router from './components/Router/Router';
 
 
 function App() {
   return (
-    <Grid 
-    container
-    direction="column"
-    justify="center"
-    alignItems="center">
-  
+    <Provider store={store}>
+      <BrowserRouter>
+        <Grid
+          container
+          direction="column"
+          justify="center"
+          alignItems="center">
 
-    <div className="App">
-
-  <MediaCard />
-  <MediaCard />
-  <MediaCard />
-    <LogIn />
-    <Registration />
-    </div>
-  </Grid>
+          <div className="App">
+            <Router />
+          </div>
+        </Grid>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
