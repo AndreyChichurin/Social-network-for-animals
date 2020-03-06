@@ -62,7 +62,7 @@ export default function PersonalPage() {
                   <li>Hobby</li>
 
                 </ul> */}
-                 <List component="nav" className={classes.root} aria-label="mailbox folders">
+                 <List component="nav" className='ListPersonalCard' aria-label="mailbox folders">
       <ListItem button>
         <ListItemText primary="Сталинара Ибрагимовна Фетч" />
       </ListItem>

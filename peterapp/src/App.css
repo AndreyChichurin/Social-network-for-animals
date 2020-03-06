@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -75,4 +76,8 @@ ControlledOpenSelect{
 .addButtonFlex {
   position: relative;
  
+}
+
+.ListPersonalCard {
+  top: 80px;
 }
