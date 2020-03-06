@@ -15,9 +15,9 @@ function Navbar(classes) {
       <MenuIcon />
     </IconButton>
     <Typography variant="h6" className={classes.title}>
-      News
+      PugPug
     </Typography>
-    <Button color="inherit">Login</Button>
+    <Button color="inherit">C</Button>
   </Toolbar>
 </AppBar>
   );   

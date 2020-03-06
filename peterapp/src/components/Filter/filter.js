@@ -48,7 +48,7 @@ export default function ControlledOpenSelect(props) {
     return (
         <div>
             <Button className={classes.button} onClick={handleOpen}>
-                Filter
+               
       </Button>
             <Box display='flex' justifyContent="left">
                 <Box borderRadius="borderRadius" {...defaultProps} >
