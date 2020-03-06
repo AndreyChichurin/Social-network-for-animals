@@ -16,6 +16,9 @@ import Box from '@material-ui/core/Box';
 export default () => (
   <Switch>
     <Route exact path="/">
+    {/* <h1 className='h'>
+        Find a significant other for your pet
+        </h1> */}
     <video autoPlay="autoplay" loop="loop" width="100%">
       <source src="https://storage.coverr.co/videos/coverr-horses-1572171301897?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjExNDMyN0NEOTRCMUFCMTFERTE3IiwiaWF0IjoxNTgzNDkxNDMzfQ.or5-mTZW4XOICTAZ_6hscNv7dYdNKcF3DVZqRtfkIkI" ></source>
     </video>
