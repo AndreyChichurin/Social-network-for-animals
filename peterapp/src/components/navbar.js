@@ -18,6 +18,24 @@ function Navbar(classes) {
       PugPug
     </Typography>
     <Button color="inherit">C</Button>
+        <span color='green'>
+          <Button variant="contained" color="inherit" href='/'>
+            Home
+        </Button> </span>
+         <span color='green'>
+          <Button variant="contained" color="inherit" href='/login'>
+            Sign In
+        </Button> </span>
+        <span color='green'>
+          <Button variant="contained" color="inherit" href='/registration'>
+            Sign Up
+        </Button> </span>
+        <span color='green'>
+          <Button variant="contained" color="inherit" href='/account'>
+            Account
+        </Button> 
+        </span>
+
   </Toolbar>
 </AppBar>
   );   

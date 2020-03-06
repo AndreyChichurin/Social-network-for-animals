@@ -38,17 +38,16 @@ export default function ControlledOpenSelect(props) {
     };
 
     const defaultProps = {
-        
+        borderColor: 'inherit',
         m: 1,
-        
-        // bgcolor: "#EEEEEE",
-        style: { width: '20rem', height: '50rem' },
+        bgcolor: "#EEEEEE",
+        style: { width: '20rem', height: '20.5rem' },
     };
 
     return (
         <div>
             <Button className={classes.button} onClick={handleOpen}>
-               
+               Filter
       </Button>
             <Box display='flex' justifyContent="left">
                 <Box borderRadius="borderRadius" {...defaultProps} >
@@ -57,11 +56,13 @@ export default function ControlledOpenSelect(props) {
                     <Auto name={breeds} label="Breed" />
                     <Auto name={cities} label="City" />
                     <Auto name={priceRange} label="Range of Price" />
-                    <Button variant="contained" color="primary" className='filterbutton'>
-                        Submit
-                    </Button>
                 </Box>
             </Box>
+            <span className='submitButton'>
+            <Button variant="contained" color="secondary" className='filterbutton'>
+                        Accept
+            </Button>
+            </span>
 
         </div>
     );
