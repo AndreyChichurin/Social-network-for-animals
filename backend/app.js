@@ -1,12 +1,22 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const app = express();
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const path = require('path');
+const userModel = require('./model/user.js')
+const userAddShcema = require('./model/UserAd.js')
+const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
+const bodyParser = require('body-parser')
+const session = require("express-session");
+const FileStore = require('session-file-store')(session);
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.net/test?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
