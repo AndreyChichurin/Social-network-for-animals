@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { userPostFetch } from '../../../redux/actions';
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -34,6 +37,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SignUp() {
+  
   const classes = useStyles();
 
   return (
