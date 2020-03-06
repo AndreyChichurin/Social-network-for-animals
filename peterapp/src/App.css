@@ -8,12 +8,27 @@
   pointer-events: none;
 }
 
+.Logo{
+  position: absolute;
+  margin-left: 30px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+h1{
+  text-align: center;
+  position: relative;
+  color:red;
+}
+.log{
+  position: relative;
+  text-align: end;
+  margin-right: 50px;
 
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,6 +42,9 @@
 
 .App-link {
   color: #61dafb;
+}
+ControlledOpenSelect{
+  position: absolute;
 }
 
 @keyframes App-logo-spin {
