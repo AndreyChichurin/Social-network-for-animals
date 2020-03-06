@@ -5,6 +5,13 @@ import store from './redux/store';
 import './App.css';
 
 import Grid from '@material-ui/core/Grid';
+
+import Navbar from './components/navbar'
+import PersonalPage from './components/cabinet';
+
+
+
+
 import Button from '@material-ui/core/Button';
 import Router from './components/Router/Router';
 
@@ -37,7 +44,11 @@ function App() {
       </h2>
     </div>
       <BrowserRouter>
+
+      <Navbar/>
+
       <ControlledOpenSelect/>
+
         <Grid
           container
           direction="column"
@@ -45,8 +56,10 @@ function App() {
           alignItems="center">
 
           <div className="App">
+            
             <Router />
           </div>
+          <PersonalPage/>
         </Grid>
       </BrowserRouter>
     </Provider>

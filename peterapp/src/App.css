@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 .App {
   text-align: center;
 }
@@ -54,3 +55,4 @@ ControlledOpenSelect{
     transform: rotate(360deg);
   }
 }
+
