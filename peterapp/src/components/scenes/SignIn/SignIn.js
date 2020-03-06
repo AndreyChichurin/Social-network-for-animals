@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-function LogIn(props) {
+function SignIn(props) {
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -122,4 +122,4 @@ const mapDispatchToProps = dispatch => ({
   userLoginFetch: userInfo => dispatch(userLoginFetch(userInfo))
 })
 
-export default connect(null, mapDispatchToProps)(LogIn);
+export default connect(null, mapDispatchToProps)(SignIn);

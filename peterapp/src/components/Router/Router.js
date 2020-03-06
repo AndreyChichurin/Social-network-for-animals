@@ -3,8 +3,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import LogIn from '../scenes/LogIn/LogIn';
-import Registration from '../scenes/Registration/Registration';
+import SignIn from '../scenes/SignIn/SignIn';
+import SignUp from '../scenes/SignUp/SignUp';
 import MediaCard from '../scenes/Card/Card'
 
 
@@ -16,10 +16,10 @@ export default () => (
       <MediaCard />
     </Route>
     <Route path="/login">
-      <LogIn />
+      <SignIn />
     </Route>
     <Route path="/registration">
-      <Registration />
+      <SignUp />
     </Route>
   </Switch>
 );

@@ -8,31 +8,31 @@ mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.ne
 
 const users = [{
     
-    emale: 'volodya@google.com',
+    email: 'volodya@google.com',
     password: '123',
     userAd:[]
 },
 {
     
-    emale: 'Misha@google.com',
+    email: 'Misha@google.com',
     password: '123',
     userAd:[]
 },
 {
    
-    emale: 'Kolya@google.com',
+    email: 'Kolya@google.com',
     password: '123',
     userAd:[]
 },
 {
     
-    emale: 'Jenya@google.com',
+    email: 'Jenya@google.com',
     password: '123',
     userAd:[]
 },
 {
     
-    emale: 'Polskiy_Knaz@google.com',
+    email: 'Polskiy_Knaz@google.com',
     password: '123',
     userAd:[]
 },

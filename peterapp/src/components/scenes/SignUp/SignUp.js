@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import { userPostFetch } from '../../../redux/actions';
 
@@ -18,7 +18,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: theme.spacing(8),  
+    marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -36,8 +36,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignUp() {
-  
+function SignUp(props) {
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    props.userLoginFetch(email, password)
+  }
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+
   const classes = useStyles();
 
   return (
@@ -55,12 +63,14 @@ export default function SignUp() {
             <Grid item xs={12} >
               <TextField
                 autoComplete="fname"
-                name="firstName"
+                name="name"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
+                id="name"
                 label="Имя"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
                 autoFocus
               />
             </Grid>
@@ -83,6 +93,8 @@ export default function SignUp() {
                 id="email"
                 label="Email адрес"
                 name="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
                 autoComplete="email"
               />
             </Grid>
@@ -96,6 +108,8 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -126,3 +140,9 @@ export default function SignUp() {
     </Container>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  userPostFetch: userInfo => dispatch(userPostFetch(userInfo))
+})
+
+export default connect(null, mapDispatchToProps)(SignUp);
