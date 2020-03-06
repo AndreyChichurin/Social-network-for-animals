@@ -47,20 +47,20 @@ function App() {
 
       <Navbar/>
 
-      <ControlledOpenSelect/>
+      
 
-        <Grid
+        {/* <Grid
           container
-          direction="column"
+          direction="row"
           justify="center"
-          alignItems="center">
+          alignItems="center"> */}
 
-          <div className="App">
+          
             
             <Router />
-          </div>
+          
           <PersonalPage/>
-        </Grid>
+        {/* </Grid> */}
       </BrowserRouter>
     </Provider>
   );

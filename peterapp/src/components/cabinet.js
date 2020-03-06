@@ -12,6 +12,8 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import GitHubIcon from '@material-ui/icons/GitHub';
+// import pink from '@material-ui/core/Pink'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -84,8 +86,8 @@ export default function PersonalPage() {
                 
               </Grid>
               
-                  <IconButton aria-label="delete">
-                    <AddIcon /> 
+                  <IconButton aria-label="delete"className="addButton">
+                    <GitHubIcon className="addButonFlex" /> 
                   </IconButton>
                 
 

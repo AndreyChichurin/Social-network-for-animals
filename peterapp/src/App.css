@@ -55,4 +55,24 @@ ControlledOpenSelect{
     transform: rotate(360deg);
   }
 }
+.ContainerMain {
+  display: flex;
+  justify-content: center
+}
+.ContainerOne {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+ 
+}
+.addButton {
+  width: 100px; 
+  height: 100px; 
+  position: relative;
+  left: 200px;
 
+}
+.addButtonFlex {
+  position: relative;
+ 
+}
