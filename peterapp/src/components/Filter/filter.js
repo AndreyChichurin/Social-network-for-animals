@@ -38,10 +38,10 @@ export default function ControlledOpenSelect(props) {
     };
 
     const defaultProps = {
-        borderColor: 'text.primary',
+        
         m: 1,
-        border: 5,
-        bgcolor: "#EEEEEE",
+        
+        // bgcolor: "#EEEEEE",
         style: { width: '20rem', height: '50rem' },
     };
 
