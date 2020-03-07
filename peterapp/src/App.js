@@ -21,11 +21,8 @@ import ControlledOpenSelect from "./components/Filter/filter"
 function App() {
   return (
     <Provider store={store}>
+
           <div>
-      <img src="TestLogo.jpg" className="Logo"></img>
-      <h1>
-        Find a significant other for your pet
-      </h1>
       <div className="App">
       </div>
       <h2 className='log'>
@@ -44,23 +41,23 @@ function App() {
       </h2>
     </div>
       <BrowserRouter>
+         {/*<img src="TestLogo.jpg" className="Logo"></img> */}
 
       <Navbar/>
+    
 
-      <ControlledOpenSelect/>
-
-        <Grid
+        {/* <Grid
           container
-          direction="column"
+          direction="row"
           justify="center"
-          alignItems="center">
+          alignItems="center"> */}
 
-          <div className="App">
+          
             
             <Router />
-          </div>
+          
           <PersonalPage/>
-        </Grid>
+        {/* </Grid> */}
       </BrowserRouter>
     </Provider>
   );
