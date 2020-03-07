@@ -23,7 +23,8 @@ const useStyles = makeStyles({
 
 export default function MediaCard(animal) {
   const classes = useStyles();
-  const  { name, desc, age , image, location, color,  } = animal;
+  const  { name, desc, age , location } = animal;
+  // const  { image, color  } = animal;
 
   return (
     <Card className={classes.root}>

@@ -3,8 +3,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import LogIn from '../scenes/LogIn/LogIn';
-import Registration from '../scenes/Registration/Registration';
+import SignIn from '../scenes/SignIn/SignIn';
+import SignUp from '../scenes/SignUp/SignUp';
 import MediaCard from '../scenes/Card/Card'
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
@@ -42,10 +42,10 @@ export default () => (
       </Grid>
     </Route>
     <Route path="/login">
-      <LogIn />
+      <SignIn />
     </Route>
     <Route path="/registration">
-      <Registration />
+      <SignUp />
     </Route>
   </Switch>
 );

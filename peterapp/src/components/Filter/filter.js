@@ -22,16 +22,16 @@ const useStyles = makeStyles(theme => ({
 
 export default function ControlledOpenSelect(props) {
     const classes = useStyles();
-    const setAge = React.useState('');
+    // const setAge = React.useState('');
     const setOpen = React.useState(false);
 
-    const handleChange = event => {
-        setAge(event.target.value);
-    };
+    // const handleChange = event => {
+    //     setAge(event.target.value);
+    // };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+    // const handleClose = () => {
+    //     setOpen(false);
+    // };
 
     const handleOpen = () => {
         setOpen(true);
