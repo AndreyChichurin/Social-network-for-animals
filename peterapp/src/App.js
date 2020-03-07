@@ -34,7 +34,7 @@ function App() {
             Sign In
         </Button> </span>
         <span color='green'>
-          <Button variant="contained" color="primary" href='/auth'>
+          <Button variant="contained" color="primary" href='/registration'>
             Sign Up
         </Button> </span>
         <span color='green'>

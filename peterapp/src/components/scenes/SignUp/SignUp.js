@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { userPostFetch } from '../../../redux/actions';
+import { withRouter } from 'react-router-dom'
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -38,17 +39,25 @@ const useStyles = makeStyles(theme => ({
 
 function SignUp(props) {
 
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const user = {
+    name: name,
+    email: email,
+    password: password
+  }
+
   const handleSubmit = event => {
     event.preventDefault()
-    props.userLoginFetch(email, password)
+    props.userPostFetch(user)
   }
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
 
   const classes = useStyles();
 
   return (
+    
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -58,7 +67,7 @@ function SignUp(props) {
         <Typography component="h1" variant="h5">
           Регистрация
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} >
               <TextField
@@ -74,17 +83,6 @@ function SignUp(props) {
                 autoFocus
               />
             </Grid>
-            {/* <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Фамилия"
-                name="lastName"
-                autoComplete="lname"
-              /> */}
-            {/* </Grid> */}
             <Grid item xs={12}>
               <TextField
                 variant="outlined"

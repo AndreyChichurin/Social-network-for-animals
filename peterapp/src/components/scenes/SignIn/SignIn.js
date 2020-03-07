@@ -39,13 +39,18 @@ const useStyles = makeStyles(theme => ({
 
 function SignIn(props) {
 
-  const handleSubmit = event => {
-    event.preventDefault()
-    props.userLoginFetch(email, password)
-  }
-
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+
+  const user = {
+    email: email,
+    password: password
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    props.userLoginFetch(user)
+  }
 
   const classes = useStyles();
 
