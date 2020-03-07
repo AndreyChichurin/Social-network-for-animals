@@ -25,6 +25,11 @@ const loginUser = userObj => ({
     payload: userObj
 })
 
+export const logoutUser = () => {
+  return {
+    type: 'LOGOUT_USER'
+  };
+};
 
 export const userLoginFetch = user => {
   return dispatch => {

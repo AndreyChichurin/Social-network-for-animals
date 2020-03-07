@@ -1,7 +1,7 @@
-var express = require('express');
-var bcrypt = require('bcrypt');
-var router = express.Router();
-var jwt = require('jwt-simple')
+const express = require('express');
+const bcrypt = require('bcrypt');
+const router = express.Router();
+const jwt = require('jwt-simple')
 const User = require('../models/user');
 
 router.post('/', function (req, res, next) {
@@ -21,11 +21,8 @@ router.post('/', function (req, res, next) {
     jwt: token
   };
   user.save(function (err) {
-    if (err) { res.sendStatus(500) }
-    else {
       res.json(x)
     }
-  }
   )
 })
 

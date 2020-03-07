@@ -22,6 +22,8 @@ mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.ne
 
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+
 // app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());

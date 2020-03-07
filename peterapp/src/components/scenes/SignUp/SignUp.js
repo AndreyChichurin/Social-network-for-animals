@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { userPostFetch } from '../../../redux/actions';
-import { withRouter } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -11,7 +11,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -39,6 +38,8 @@ const useStyles = makeStyles(theme => ({
 
 function SignUp(props) {
 
+  const history = useHistory();
+
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -52,12 +53,13 @@ function SignUp(props) {
   const handleSubmit = event => {
     event.preventDefault()
     props.userPostFetch(user)
+    history.push("/");
   }
 
   const classes = useStyles();
 
   return (
-    
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -78,7 +80,7 @@ function SignUp(props) {
                 fullWidth
                 id="name"
                 label="Имя"
-                value={name}
+                // value={name}
                 onChange={(event) => setName(event.target.value)}
                 autoFocus
               />
@@ -91,7 +93,7 @@ function SignUp(props) {
                 id="email"
                 label="Email адрес"
                 name="email"
-                value={email}
+                // value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 autoComplete="email"
               />
@@ -106,7 +108,7 @@ function SignUp(props) {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                value={password}
+                // value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Grid>
