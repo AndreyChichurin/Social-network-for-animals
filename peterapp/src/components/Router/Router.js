@@ -6,6 +6,7 @@ import {
 import SignIn from '../scenes/SignIn/SignIn';
 import SignUp from '../scenes/SignUp/SignUp';
 import MediaCard from '../scenes/Card/Card'
+import Account from '../scenes/Account/Account';
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -46,6 +47,9 @@ export default () => (
     </Route>
     <Route path="/registration">
       <SignUp />
+    </Route>
+    <Route path="/account">
+      <Account />
     </Route>
   </Switch>
 );

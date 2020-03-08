@@ -6,7 +6,7 @@ import './App.css';
 
 // import Grid from '@material-ui/core/Grid';
 
-import Navbar from './components/navbar'
+import Navbar from './components/scenes/Navbar/Navbar'
 // import PersonalPage from './components/cabinet';
 
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <Provider store={store}>
 
-      <div>
+      {/* <div>
         <div className="App">
         </div>
         <h2 className='log'>
@@ -39,7 +39,7 @@ function App() {
               Account
         </Button> </span>
         </h2>
-      </div>
+      </div> */}
       <BrowserRouter>
         {/*<img src="TestLogo.jpg" className="Logo"></img> */}
 
