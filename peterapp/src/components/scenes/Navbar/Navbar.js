@@ -8,36 +8,49 @@ import IconButton from '@material-ui/core/IconButton';
 // import Pink from '@material-ui/core/colors/pink';
 
 function Navbar(classes) {
+
   return (
-<AppBar position="static" color="default">
-  <Toolbar>
-    <IconButton edge="start" className={classes.menuButton} color="default" aria-label="menu">
-      <MenuIcon />
-    </IconButton>
-    <Typography variant="h6" className={classes.title}>
-      PugPug
-    </Typography>
-    <Button color="inherit">C</Button>
+    <AppBar position="static" color="default">
+      <Toolbar>
+        <IconButton edge="start" className={classes.menuButton} color="default" aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" className={classes.title}>
+          PugPug
+        </Typography>
+        {/* <Button color="inherit">C</Button> */}
         <span color='green'>
           <Button variant="contained" color="inherit" href='/'>
             Home
         </Button> </span>
-         <span color='green'>
-          <Button variant="contained" color="inherit" href='/login'>
-            Sign In
-        </Button> </span>
-        <span color='green'>
-          <Button variant="contained" color="inherit" href='/registration'>
-            Sign Up
-        </Button> </span>
-        <span color='green'>
-          <Button variant="contained" color="inherit" href='/account'>
-            Account
-        </Button> 
-        </span>
-
-  </Toolbar>
-</AppBar>
-  );   
+        <div>
+          {localStorage.token ? (
+            <div>
+              <span color='green'>
+                <Button variant="contained" color="inherit" href='/account'>
+                  Account
+          </Button>
+              </span>
+              <span color='green'>
+                <Button variant="contained" color="inherit" href='/logout'>
+                  EXIT
+          </Button>
+              </span>
+            </div>) : (
+              <div>
+                <span color='green'>
+                  <Button variant="contained" color="inherit" href='/login'>
+                    Sign In
+                </Button> </span>
+                <span color='green'>
+                  <Button variant="contained" color="inherit" href='/registration'>
+                    Sign Up
+                  </Button> </span>
+              </div>
+            )}
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
 }
 export default Navbar

@@ -5,20 +5,17 @@ import store from './redux/store';
 import './App.css';
 
 // import Grid from '@material-ui/core/Grid';
-
 import Navbar from './components/scenes/Navbar/Navbar'
 // import PersonalPage from './components/cabinet';
 
-
-
-
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Router from './components/Router/Router';
 
 // import ControlledOpenSelect from "./components/Filter/filter"
 
 
 function App() {
+  console.log(localStorage)
   return (
     <Provider store={store}>
 
@@ -42,20 +39,13 @@ function App() {
       </div> */}
       <BrowserRouter>
         {/*<img src="TestLogo.jpg" className="Logo"></img> */}
-
         <Navbar />
-
-
         {/* <Grid
           container
           direction="row"
           justify="center"
           alignItems="center"> */}
-
-
-
         <Router />
-
         {/* <PersonalPage/> */}
         {/* </Grid> */}
       </BrowserRouter>
