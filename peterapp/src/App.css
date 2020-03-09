@@ -81,3 +81,7 @@ ControlledOpenSelect{
 .ListPersonalCard {
   top: 80px;
 }
+.navlink {
+  display: flex;
+  flex-direction: row;
+}
