@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { userPostFetch } from '../../../redux/actions';
+import { useHistory } from "react-router-dom";
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -10,7 +11,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -18,7 +18,7 @@ import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: theme.spacing(8),  
+    marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -36,11 +36,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignUp() {
-  
+function SignUp(props) {
+
+  const history = useHistory();
+
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const user = {
+    name: name,
+    email: email,
+    password: password
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    props.userPostFetch(user)
+    history.push("/");
+  }
+
   const classes = useStyles();
 
   return (
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -50,31 +69,22 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Регистрация
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12} >
               <TextField
                 autoComplete="fname"
-                name="firstName"
+                name="name"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
+                id="name"
                 label="Имя"
+                // value={name}
+                onChange={(event) => setName(event.target.value)}
                 autoFocus
               />
             </Grid>
-            {/* <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Фамилия"
-                name="lastName"
-                autoComplete="lname"
-              /> */}
-            {/* </Grid> */}
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
@@ -83,6 +93,8 @@ export default function SignUp() {
                 id="email"
                 label="Email адрес"
                 name="email"
+                // value={email}
+                onChange={(event) => setEmail(event.target.value)}
                 autoComplete="email"
               />
             </Grid>
@@ -96,6 +108,8 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                // value={password}
+                onChange={(event) => setPassword(event.target.value)}
               />
             </Grid>
             <Grid item xs={12}>
@@ -126,3 +140,9 @@ export default function SignUp() {
     </Container>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  userPostFetch: userInfo => dispatch(userPostFetch(userInfo))
+})
+
+export default connect(null, mapDispatchToProps)(SignUp);

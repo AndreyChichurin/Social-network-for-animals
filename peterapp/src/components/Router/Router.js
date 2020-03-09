@@ -4,9 +4,12 @@ import {
   Switch,
   BrowserRouter
 } from 'react-router-dom';
-import LogIn from '../scenes/LogIn/LogIn';
-import Registration from '../scenes/Registration/Registration';
+
+import LogOut from '../scenes/LogOut/LogOut';
+import SignIn from '../scenes/SignIn/SignIn';
+import SignUp from '../scenes/SignUp/SignUp';
 import MediaCard from '../scenes/Card/Card'
+import Account from '../scenes/Account/Account';
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -14,7 +17,6 @@ import Bot from '../Bot/Bot/bot';
 import Navbar from '../navbar'
 import Home from '../cabinet'
 import ImageUploader from '../../firebase/imageuploader'
-
 
 
 
@@ -52,10 +54,16 @@ export default () => (
       <Home/>
     </Route>
     <Route path="/login">
-      <LogIn />
+      <SignIn />
     </Route>
     <Route path="/registration">
-      <Registration />
+      <SignUp />
+    </Route>
+    <Route path="/account">
+      <Account />
+    </Route>
+    <Route path="/logout">
+      <LogOut />
     </Route>
   </Switch>
   </BrowserRouter>
