@@ -6,9 +6,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import LoginButton from "./LoginButton"
+import LogoutButton from "./LogoutButton"
 import HomeIcon from '@material-ui/icons/Home';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import ChatIcon from '@material-ui/icons/Chat';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +31,12 @@ const Navbar = () => {
   
   const classes = useStyles();
 
+  let loginButton;
+  if (localStorage.token) {
+    loginButton = <LoginButton />;
+  } else {
+    loginButton = <LogoutButton />;
+  }
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -61,17 +70,7 @@ const Navbar = () => {
           </Button>
         </span> */}
 
-          <NavLink to='/login' exact>
-            <Button variant="contained" color="inherit">
-              Sign In
-            </Button>
-          </NavLink>
-
-          <NavLink to='/register' exact>
-            <Button variant="contained" color="inherit">
-              Sign Up
-            </Button>
-          </NavLink>
+        {loginButton}
 
         </Toolbar>
       </AppBar>
