@@ -9,6 +9,7 @@ import MediaCard from '../scenes/Card/Card'
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import AnnouncementForm from '../AnnouncementForm';
 
 
 
@@ -38,11 +39,15 @@ export default () => (
       </div>
       </Grid>
     </Route>
-    <Route path="/login">
+    <Route  path="/login">
       <LogIn />
     </Route>
     <Route path="/registration">
       <Registration />
     </Route>
+    <Route path="/announcement">
+      <Registration />
+    </Route>
+    
   </Switch>
 );

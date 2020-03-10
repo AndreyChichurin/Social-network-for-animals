@@ -6,18 +6,18 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Pink from '@material-ui/core/colors/pink';
+import Navbarlink from '../../../navbarLink';
+import './navbar.css'
 
 function Navbar(classes) {
   return (
 <AppBar position="static" color='Pink'>
-  <Toolbar>
-    <IconButton edge="start" className={classes.menuButton} color="Pink[300]" aria-label="menu">
-      <MenuIcon />
-    </IconButton>
+  <Toolbar className="toolBarPosition">
+    
     <Typography variant="h6" className={classes.title}>
       PugPug
     </Typography>
-    <Button color="inherit">C</Button>
+    <Navbarlink />
   </Toolbar>
 </AppBar>
   );   
