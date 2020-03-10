@@ -15,8 +15,9 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Bot from '../Bot/Bot/bot';
 import Navbar from '../navbar'
-import Home from '../cabinet'
+// import Home from '../cabinet'
 import ImageUploader from '../../firebase/imageuploader'
+import Slider from '../LikeAppComponent/slidercomponent'
 
 
 
@@ -41,6 +42,7 @@ export default () => (
       <ControlledOpenSelect/>
       <Box display='flex' justifyContent="rigth" flexWrap="wrap">
       <ImageUploader/>
+      <Slider/>
       <MediaCard />
       <Bot />
       <MediaCard />
@@ -51,7 +53,7 @@ export default () => (
       </Grid>
     </Route>
     <Route path='/home'>
-      <Home/>
+    
     </Route>
     <Route path="/login">
       <SignIn />

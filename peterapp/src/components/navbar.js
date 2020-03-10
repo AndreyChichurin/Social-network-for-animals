@@ -39,7 +39,7 @@ import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ChatIcon from '@material-ui/icons/Chat';
 import Pink from '@material-ui/core/colors/pink';
-import Home from './cabinet'
+
 
 const pink = 'Pink[100]';
 const useStyles = makeStyles(theme => ({
@@ -68,7 +68,7 @@ export default function NavBar() {
           </IconButton>
           <Typography variant="h6" className={classes.title}>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/Home"  className="navlink"><HomeIcon/></NavLink></IconButton>
+            <NavLink to="/"  className="navlink"><HomeIcon/></NavLink></IconButton>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"><NavLink to="#"  className="navlink"><PeopleOutlineIcon/></NavLink></IconButton>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"><NavLink to="#"  className="navlink"><FavoriteIcon/></NavLink></IconButton> 
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"><NavLink to="#"  className="navlink"><ChatIcon/></NavLink></IconButton> 
