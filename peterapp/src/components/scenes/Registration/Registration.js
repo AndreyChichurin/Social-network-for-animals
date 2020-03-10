@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { userPostFetch } from '../../../redux/actions';
+
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -34,6 +37,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function SignUp() {
+  
   const classes = useStyles();
 
   return (
@@ -48,7 +52,7 @@ export default function SignUp() {
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} >
               <TextField
                 autoComplete="fname"
                 name="firstName"
@@ -60,7 +64,7 @@ export default function SignUp() {
                 autoFocus
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
@@ -69,8 +73,8 @@ export default function SignUp() {
                 label="Фамилия"
                 name="lastName"
                 autoComplete="lname"
-              />
-            </Grid>
+              /> */}
+            {/* </Grid> */}
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
