@@ -1,24 +1,35 @@
 import React from 'react';
 import {
   Route,
-  Switch
+  Switch,
+  BrowserRouter
 } from 'react-router-dom';
-import LogIn from '../scenes/LogIn/LogIn';
-import Registration from '../scenes/Registration/Registration';
+
+import LogOut from '../scenes/LogOut/LogOut';
+import SignIn from '../scenes/SignIn/SignIn';
+import SignUp from '../scenes/SignUp/SignUp';
 import MediaCard from '../scenes/Card/Card'
+import Account from '../scenes/Account/Account';
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import AnnouncementForm from '../AnnouncementForm';
 
+import Bot from '../Bot/Bot/bot';
+import Navbar from '../navbar'
+// import Home from '../cabinet'
+import ImageUploader from '../../firebase/imageuploader'
+import Slider from '../LikeAppComponent/slidercomponent'
 
 
 
 export default () => (
+  <BrowserRouter>
   <Switch>
+    
     <Route exact path="/">
     <video autoPlay="autoplay" loop="loop" width="100%">
-      <source src="https://storage.coverr.co/videos/coverr-horses-1572171301897?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjExNDMyN0NEOTRCMUFCMTFERTE3IiwiaWF0IjoxNTgzNDkxNDMzfQ.or5-mTZW4XOICTAZ_6hscNv7dYdNKcF3DVZqRtfkIkI" ></source>
+      <source src="https://storage.coverr.co/videos/Dog-in-Farm?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjExNDMyN0NEOTRCMUFCMTFERTE3IiwiaWF0IjoxNTgzNDkxNDEyfQ.dH9roTj7q-zI7a9jUyHWmQY5-DupaBftUSDYxsmbOEk" ></source>
     </video>
   
     <Grid
@@ -31,7 +42,10 @@ export default () => (
    
       <ControlledOpenSelect/>
       <Box display='flex' justifyContent="rigth" flexWrap="wrap">
+      <ImageUploader/>
+      <Slider/>
       <MediaCard />
+      <Bot />
       <MediaCard />
       <MediaCard />
       </Box> 
@@ -39,15 +53,25 @@ export default () => (
       </div>
       </Grid>
     </Route>
-    <Route  path="/login">
-      <LogIn />
+    <Route path='/home'>
+    
+    </Route>
+    <Route path="/login">
+      <SignIn />
     </Route>
     <Route path="/registration">
-      <Registration />
+      <SignUp />
+    </Route>
+    <Route path="/account">
+      <Account />
+    </Route>
+    <Route path="/logout">
+      <LogOut />
     </Route>
     <Route path="/announcement">
       <Registration />
     </Route>
     
   </Switch>
+  </BrowserRouter>
 );

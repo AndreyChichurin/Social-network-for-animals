@@ -14,8 +14,8 @@ const useStyles = makeStyles(theme => ({
 }));
 export default function Auto(props) {
   const classes = useStyles();
-  const setAge = React.useState('');
-  const setOpen = React.useState(false);
+  // const setAge = React.useState('');
+  // const setOpen = React.useState(false);
 
   return (
     <div>

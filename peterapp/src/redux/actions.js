@@ -1,6 +1,6 @@
 export const userPostFetch = user => {
   return dispatch => {
-    return fetch("http://localhost:5000/api/v1/users", {
+    return fetch("http://localhost:5000/api/v1/user", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -11,12 +11,8 @@ export const userPostFetch = user => {
       .then(resp => resp.json())
       .then(data => {
         if (data.message) {
-          console.log(data.message)
-          //Тут прописываем логику
-          
+
         } else {
-          console.log(data.jwt)
-          console.log(data.user)
           localStorage.setItem("token", data.jwt)
           dispatch(loginUser(data.user))
         }
@@ -29,10 +25,15 @@ const loginUser = userObj => ({
     payload: userObj
 })
 
+export const logoutUser = () => {
+  return {
+    type: 'LOGOUT_USER'
+  };
+};
 
 export const userLoginFetch = user => {
   return dispatch => {
-    return fetch("http://localhost:3000/api/v1/login", {
+    return fetch("http://localhost:5000/api/v1/login", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +44,7 @@ export const userLoginFetch = user => {
       .then(resp => resp.json())
       .then(data => {
         if (data.message) {
-         //тут ваша логика
+         
         } else {
           localStorage.setItem("token", data.jwt)
           dispatch(loginUser(data.user))
@@ -51,3 +52,4 @@ export const userLoginFetch = user => {
       })
   }
 }
+
