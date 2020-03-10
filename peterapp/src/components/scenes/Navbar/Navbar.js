@@ -1,56 +1,82 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-// import Pink from '@material-ui/core/colors/pink';
+import { NavLink } from 'react-router-dom'
 
-function Navbar(classes) {
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import HomeIcon from '@material-ui/icons/Home';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import ChatIcon from '@material-ui/icons/Chat';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
+
+
+
+const Navbar = () => {
+  
+  const classes = useStyles();
 
   return (
-    <AppBar position="static" color="default">
-      <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="default" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" className={classes.title}>
-          PugPug
-        </Typography>
-        {/* <Button color="inherit">C</Button> */}
-        <span color='green'>
-          <Button variant="contained" color="inherit" href='/'>
-            Home
-        </Button> </span>
-        <div>
-          {localStorage.token ? (
-            <div>
-              <span color='green'>
-                <Button variant="contained" color="inherit" href='/account'>
-                  Account
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Toolbar>
+
+          <IconButton edge="start" className={classes.menuButton} aria-label="menu">
+            {/* <MenuIcon /> */}
+          </IconButton>
+
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <NavLink to="/" className="navlink" exact>
+              <HomeIcon />
+            </NavLink>
+          </IconButton>
+
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <NavLink to="/account" className="navlink">
+              <PeopleOutlineIcon />
+            </NavLink>
+          </IconButton>
+
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <NavLink to="/chat" className="navlink">
+              <ChatIcon />
+            </NavLink>
+          </IconButton>
+
+          {/* <span color='green'>
+          <Button variant="contained" color="inherit" href='/logout'>
+            EXIT
           </Button>
-              </span>
-              <span color='green'>
-                <Button variant="contained" color="inherit" href='/logout'>
-                  EXIT
-          </Button>
-              </span>
-            </div>) : (
-              <div>
-                <span color='green'>
-                  <Button variant="contained" color="inherit" href='/login'>
-                    Sign In
-                </Button> </span>
-                <span color='green'>
-                  <Button variant="contained" color="inherit" href='/registration'>
-                    Sign Up
-                  </Button> </span>
-              </div>
-            )}
-        </div>
-      </Toolbar>
-    </AppBar>
-  );
+        </span> */}
+
+          <NavLink to='/login' exact>
+            <Button variant="contained" color="inherit">
+              Sign In
+            </Button>
+          </NavLink>
+
+          <NavLink to='/register' exact>
+            <Button variant="contained" color="inherit">
+              Sign Up
+            </Button>
+          </NavLink>
+
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
 }
+
 export default Navbar
