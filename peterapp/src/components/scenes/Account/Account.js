@@ -1,9 +1,7 @@
 import React from 'react'
-// import Navbar from './navbar'
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-// import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import pink from '@material-ui/core/colors/pink';
 import red from '@material-ui/core/colors/red';
@@ -15,20 +13,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom'
 // import pink from '@material-ui/core/Pink'
+import AnnouncementForm from "../AnnouncementForm/AnnouncementForm"
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    
-    
   },
   paper: {
     padding: theme.spacing(3),
     
     maxWidth: 550,
     backgroundColor: pink[50]
-    
   },
   image: {
     width: 250,
@@ -59,13 +56,15 @@ export default function PersonalPage() {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper} backgro>
-        Username
+        Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя*/}
         <Grid container spacing={2}>
+
           <Grid item>
             <ButtonBase className={classes.image}>
               <img className={classes.img} alt="complex" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRb1rbKH9VCUTzbqNwyRaVVoz5CFto6NTy5EHBxwnAd9kc4oUe7" />
             </ButtonBase>
           </Grid>
+
           <Grid item xs={6} sm container >
             <Grid item xs container direction="column" spacing={3} >
               <Grid item xs>
@@ -103,15 +102,16 @@ export default function PersonalPage() {
         </Grid>
       </Paper>
       <div className={classes.block}>
-        <Button className={classes.button} variant="contained" size="small" color="primary" >
+      <NavLink to='/announcement'>
+        <Button className={classes.button} variant="contained" size="small" color="secondary" >   
            Добавить объявление
         </Button>
+        </NavLink>
         <Button className={classes.button} variant="contained" size="small" color="primary" >
            Избранные
         </Button>
-        <Button className={classes.button} variant="contained" size="small" color="primary" >
-           Сообщения
-        </Button>
+
+        
         </div>
     </div>
   );

@@ -12,6 +12,7 @@ import Account from '../scenes/Account/Account';
 import ControlledOpenSelect from '../Filter/filter'
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import AnnouncementForm from '../scenes/AnnouncementForm/AnnouncementForm';
 
 
 
@@ -66,6 +67,9 @@ export default () => (
     </Route>
     <Route path="/logout">
       <LogOut />
+    </Route>
+    <Route path="/announcement">
+      <AnnouncementForm />
     </Route>
   </Switch>
 );

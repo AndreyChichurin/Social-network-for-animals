@@ -1,21 +1,20 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
 
 import Navbar from './components/scenes/Navbar/Navbar'
-import Router from './components/Router/Router';
 
+import Routes from './components/Routes/Routes';
 
-function App() {
-  console.log(localStorage)
+import { Provider } from 'react-redux';
+import { store } from '../src/components/scenes/Bot/Bot/chat'
+
+const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <Navbar />
-        <Router />
-      </BrowserRouter>
+    <Router>
+      <Navbar />
+      <Routes />
+    </Router>
     </Provider>
   );
 }

@@ -1,18 +1,22 @@
 import React from "react"
 import Button from '@material-ui/core/Button';
+import {NavLink} from 'react-router-dom'
+
 export default function LogoutButton() {
 
     return (
         <div>
-            <span color='green'>
-                <Button variant="contained" color="inherit" href='/login'>
-                    Sign In
-                </Button> </span>
-            <span color='green'>
-                <Button variant="contained" color="inherit" href='/registration'>
-                    Sign Up
-                </Button> 
-            </span>
+          <NavLink to='/login' exact>
+            <Button variant="contained" color="inherit">
+              Sign In
+            </Button>
+          </NavLink>
+
+          <NavLink to='/register' exact>
+            <Button variant="contained" color="inherit">
+              Sign Up
+            </Button>
+          </NavLink>
         </div>
     )
 
