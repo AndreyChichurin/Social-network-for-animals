@@ -35,8 +35,20 @@ export default () => (
 
             <ControlledOpenSelect />
             <Box display='flex' justifyContent="rigth" flexWrap="wrap">
-              <MediaCard />
-              <MediaCard />
+              <MediaCard 
+              name="Masha" 
+              age='5' 
+              location = "Novosibirsk" 
+              image='https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/12/20/10/istock-1128787444.jpg'
+              description='Masha likes group across all continents except Antarctica'
+              />
+              <MediaCard 
+              name="Danya"
+              age='7'
+              image = "https://images.unsplash.com/photo-1568564321589-3e581d074f9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              location = "Moscow"
+              description='Smartest dog you ever seen, can solve not so simple tasks'
+              />
               <MediaCard />
             </Box>
           </div>

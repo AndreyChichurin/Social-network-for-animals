@@ -5,10 +5,17 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-// import Pink from '@material-ui/core/colors/pink';
+import LoginButton from "./LoginButton"
+import LogoutButton from "./LogoutButton"
 
 function Navbar(classes) {
 
+  let loginButton;
+  if (localStorage.token) {
+    loginButton = <LoginButton />;
+  } else {
+    loginButton = <LogoutButton />;
+  }
   return (
     <AppBar position="static" color="default">
       <Toolbar>
@@ -24,30 +31,7 @@ function Navbar(classes) {
             Home
         </Button> </span>
         <div>
-          {localStorage.token ? (
-            <div>
-              <span color='green'>
-                <Button variant="contained" color="inherit" href='/account'>
-                  Account
-          </Button>
-              </span>
-              <span color='green'>
-                <Button variant="contained" color="inherit" href='/logout'>
-                  EXIT
-          </Button>
-              </span>
-            </div>) : (
-              <div>
-                <span color='green'>
-                  <Button variant="contained" color="inherit" href='/login'>
-                    Sign In
-                </Button> </span>
-                <span color='green'>
-                  <Button variant="contained" color="inherit" href='/registration'>
-                    Sign Up
-                  </Button> </span>
-              </div>
-            )}
+          {loginButton}
         </div>
       </Toolbar>
     </AppBar>
