@@ -6,7 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 1;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,13 +22,13 @@ ol, ul {
 }
 
 header {
-	background-color: white;
+	/* background-color: white; */
 	overflow: hidden;
 	display: flex;
 }
 
 header {
-	background-color: white;
+	/* background-color: white; */
 	overflow: hidden;
 	display: flex;
 	align-items: center;

@@ -11,10 +11,10 @@ const Actions =({person, modifySuperficialChoices}) => (
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
     />
-     <Like 
+     {/* <Like 
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
-    />
+    /> */}
     {/* <Superlike
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
