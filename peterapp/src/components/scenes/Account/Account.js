@@ -80,12 +80,12 @@ export default function PersonalPage() {
 
 
 
-//       {<Paper className={classes.paper} backgro>
+{/* //       {<Paper className={classes.paper} backgro>
 
 //       <Paper className={classes.paper} backgro>
-//         Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя}
+//         Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя} */}
 
-//         <Grid container spacing={2}>
+{/* //         <Grid container spacing={2}>
 
 //           <Grid item>
 //             <ButtonBase className={classes.image}>
@@ -95,7 +95,7 @@ export default function PersonalPage() {
 
 //           <Grid item xs={6} sm container >
 //             <Grid item xs container direction="column" spacing={3} >
-//               <Grid item xs>
+//               <Grid item xs> */}
 //                 {/* <ul>
 //                   <li>Name</li>
 //                   <li>LastName</li>
@@ -103,7 +103,7 @@ export default function PersonalPage() {
 //                   <li>Hobby</li>
 
 //                 </ul> */}
-//                  <List component="nav" className='ListPersonalCard' aria-label="mailbox folders">
+{/* //                  <List component="nav" className='ListPersonalCard' aria-label="mailbox folders">
 //       <ListItem>
 //         Ф.И.О. <span>{" "}</span>
 //         <ListItemText primary="Андрей Андреевич Щукин" />
@@ -125,12 +125,12 @@ export default function PersonalPage() {
 //                   <IconButton aria-label="delete"className="addButton">
 //                     <GitHubIcon className="addButonFlex" /> 
 //                   </IconButton>              
-//             </Grid>            
-//           </Grid>
-//         </Grid>
+//             </Grid>             */}
+{/* //           </Grid>
+//         </Grid> */}
 
 
-//       </Paper>
+{/* //       </Paper>
 //       <div className={classes.block}>
 //       <NavLink to='/announcement'>
 //         <Button className={classes.button} variant="contained" size="small" color="secondary" >   
@@ -139,11 +139,11 @@ export default function PersonalPage() {
 //         </NavLink>
 //         <Button className={classes.button} variant="contained" size="small" color="primary" >
 //            Избранные
-//         </Button>
+//         </Button> */}
 
         
-//         </div>
+        </div>
 
-    </div>
+   
   );
 }
