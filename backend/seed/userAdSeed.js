@@ -7,7 +7,7 @@ mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.ne
 });
 
 const userAdd = [{
-  "id": 0,
+  "id": "5",
   "name": 'Мартин',
   "desc": 'Симпотичный Cat ищет суку',
   "age": 2,
@@ -20,7 +20,7 @@ const userAdd = [{
   "password": '123',
 },
 {
-  "id": 1,
+  "id": "1",
   "name": 'Алиса',
   "desc": 'Симпотичная сучка',
   "age": 17,
@@ -33,7 +33,7 @@ const userAdd = [{
   "password": '123',
 },
 {
-  "id": 2,
+  "id": "2",
   "name": 'Сук',
   "desc": 'Заточи мой фетч',
   "age": 6,
@@ -46,7 +46,7 @@ const userAdd = [{
   "password": '123',
 },
 {
-  "id": 3,
+  "id": "3",
   "name": 'За путина',
   "desc": 'Салам, всем православным!',
   "age": 8,
@@ -59,7 +59,7 @@ const userAdd = [{
   "password": '123',
 },
 {
-  "id": 4,
+  "id": "4",
   "name": 'Джеки',
   "desc": 'Подставляй свою миску, закину свою сосиску',
   "age": 9,
