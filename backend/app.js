@@ -12,9 +12,12 @@ const FileStore = require('session-file-store')(session);
 const cors = require('cors');
 
 
+
 const userRouter = require('./routes/user');
 const loginRouter = require('./routes/login');
 const usersRouter = require('./routes/users');
+
+
 
 mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
@@ -35,5 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/login', loginRouter);
 app.use('/api/users', usersRouter);
+
 
 module.exports = app;
