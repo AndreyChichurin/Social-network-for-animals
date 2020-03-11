@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 const jwt = require('jwt-simple')
-const User = require('../models/user');
+const UserAdd = require('../models/userAd');
 
 router.post('/', async function (req, res, next) {
 
@@ -11,24 +11,23 @@ router.post('/', async function (req, res, next) {
   const password = userReq.password
   console.log(userReq, email, password)
 
-  const user = await User.find({ email: email });
+  const user = await UserAdd.find({ email: email });
   console.log(user[0].username)
-  bcrypt.compare(password, user[0].password, (err, result) => {
-    if (result === true) {
-      const token = jwt.encode(email, 'xxx');
+  if (password === user[0].password) {
+  // bcrypt.compare(password, user[0].password, (err, result) => {
+    // if (result === true) {
+      // const token = jwt.encode(email, 'xxx');
       const x = {
         user: {
           username: user[0].username,
           email: user[0].email,
-          jwt: token
+          id: user[0].id
         }
       }
       res.json(x)
     } else {
       return err
     }
-  })
-
 })
 
 module.exports = router

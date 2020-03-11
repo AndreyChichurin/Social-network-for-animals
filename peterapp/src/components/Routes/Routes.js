@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Slider from '../scenes/LikeAppComponent/slidercomponent'
+import Slider from '../scenes/Defaultslider/slidercomponent'
 import Account from '../scenes/Account/Account'
 
 import Autentification from '../scenes/Autentification/Autentification'

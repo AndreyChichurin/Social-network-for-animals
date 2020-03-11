@@ -46,7 +46,7 @@ const Autentication = props => {
   const [username, setUsername] = useState('')
   const [{ response, isLoading }, doFetch] = useFetch(apiUrl)
   const [isSuccessfulSubmit, setIsSuccessfulSubmit] = useState(false)
-  const [token, setToken] = useLocalStorage('token')
+  const [token, setToken] = useLocalStorage('id')
   const [currentUserState, setCurrentUserState] = useContext(CurrentUserContext)
 
   console.log('currentUserState', currentUserState)
@@ -67,7 +67,7 @@ const Autentication = props => {
     if (!response) {
       return
     }
-    setToken(response.user.jwt)
+    setToken(response.user.id)
     setIsSuccessfulSubmit(true)
     setCurrentUserState(state => ({
       ...state,
