@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase|Poiret+One|Press+Start+2P|Rubik+Mono+One&display=swap');
 @keyframes move_wave {
     0% {
         transform: translateX(0) translateZ(0) scaleY(1)
@@ -67,3 +68,52 @@
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase|Poiret+One|Press+Start+2P|Rubik+Mono+One&display=swap');
+.titleHeader {
+  display: block;
+  color: white;
+  font-size: 42px;
+  font-family: 'Poiret One', cursive;
+  margin: 15px;
+  width: 640px;
+  text-align: center;
+  z-index: 50;
+}
+.titleHeader-box {
+    display:flex;
+    justify-content: center;
+    z-index: 60;
+    
+}
+.button-box-item {
+    border: 2px solid rgb(28, 236, 28);
+    width: 250px;
+    box-sizing: border-box;
+    padding: 8px;
+    padding-bottom: 10px;
+    padding-top:5px;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    border-radius:50px;
+    cursor: pointer;
+    z-index: 110;
+    position: relative;
+    left: 480px;
+    display: flex;
+    justify-content: center;
+       
+};
+.button-box {
+    display: flex;
+}
+.button-box-item:hover {
+    border: 2px solid rgb(28, 236, 28);
+};
+.navlink-left {
+    position: absolute; 
+   right: 100px;
+    z-index: 300;
+}
+
