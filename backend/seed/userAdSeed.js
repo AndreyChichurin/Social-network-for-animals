@@ -15,9 +15,12 @@ const userAdd = [{
   "likedUsers": [],
   "superLikedUsers": [],
   "dislikedUsers": [],
-  "likedBy": [],
+  "likedBy": [ '1', '2', '3', '4' ],
   "email": '9632779@gmail.com',
   "password": '123',
+  "gender": "men",
+  "phone": "89775632746",
+  "breed": "Аляскинский маламут",
 },
 {
   "id": "1",
@@ -31,6 +34,9 @@ const userAdd = [{
   "likedBy": [],
   "email": '9632778@gmail.com',
   "password": '123',
+  "gender": "girl",
+  "phone": "89114578521",
+  "breed": "Бигль",
 },
 {
   "id": "2",
@@ -44,6 +50,9 @@ const userAdd = [{
   "likedBy": [],
   "email": '9632777@gmail.com',
   "password": '123',
+  "gender": "men",
+  "phone": "89523248261",
+  "breed": "Бобтейл",
 },
 {
   "id": "3",
@@ -57,6 +66,9 @@ const userAdd = [{
   "likedBy": [],
   "email": '9632776@gmail.com',
   "password": '123',
+  "gender": "men",
+  "phone": "898925163",
+  "breed": "Веймаранер",
 },
 {
   "id": "4",
@@ -70,6 +82,9 @@ const userAdd = [{
   "likedBy": [],
   "email": '9632775@gmail.com',
   "password": '123',
+  "gender": "men",
+  "phone": "89478623125",
+  "breed": "Дратхаар",
 },
 ]
 

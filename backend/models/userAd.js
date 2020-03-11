@@ -13,6 +13,9 @@ const addShcema = new Schema({
   "likedBy": {type: Array},
   "email": {type: String},
   "password": {type: String},
+  "gender": {type: String},
+  "phone": {type: String},
+  "breed": {type: String}
 });
 
 

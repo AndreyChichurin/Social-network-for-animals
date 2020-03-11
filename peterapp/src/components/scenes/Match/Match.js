@@ -1,25 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'
 
-const Match = () => {
+import Matchslider from '../Matchslider/slidercomponent'
 
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     try {
-  //       const response = await axios.post('http://localhost:5000/api/users/match', {currentUserId:localStorage.id});
-  //       console.log(response.data)
-  //       setData(response.data);
-  //       setPeople(response.data);
-  //     } catch (e) {
-  //       console.log(e);
-  //       // setData({ users: data.users, isFetching: false });
-  //     }
-  //   };
-  //   fetchUsers();
-  // }, []);
+export default function PersonalPage() {
 
   return (
-    <div></div>
-  )
-};
-
-export default Match;
+    <div>
+      <Matchslider />
+    </div>
+  );
+}

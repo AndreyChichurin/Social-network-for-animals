@@ -6,7 +6,7 @@ import Person from './additionalComponents/prerson';
 // import data from './data.json';
 import axios from 'axios'
 
-const Likedbyslider = () => {
+const Matchslider = () => {
 
   const [data, setData] = useState();
   const [people, setPeople] = useState(data);
@@ -18,7 +18,7 @@ const Likedbyslider = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/api/users/likedby', {currentUserId:localStorage.id});
+        const response = await axios.post('http://localhost:5000/api/users/match', {currentUserId:localStorage.id});
         console.log(response.data)
         setData(response.data);
         setPeople(response.data);
@@ -106,4 +106,4 @@ const Likedbyslider = () => {
   );
 };
 
-export default Likedbyslider;
+export default Matchslider;
