@@ -6,7 +6,7 @@ import Superlike from './actionsSlider/superlike'
 
 const Actions =({person, modifySuperficialChoices}) => (
   <div id="actions">
-    <Rewind userId={person.id} />
+    {/* <Rewind userId={person.id} /> */}
     <Dislike 
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
@@ -15,10 +15,10 @@ const Actions =({person, modifySuperficialChoices}) => (
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
     />
-    <Superlike
+    {/* <Superlike
         userId={person.id}
         modifySuperficialChoices={modifySuperficialChoices}
-    />
+    /> */}
   </div>
 )
 
