@@ -8,10 +8,27 @@ router.post('/', async function (req, res, next) {
     {
       $and: [
         { id: { $ne: req.body.currentUserId } },
-        { likedBy: { $nin: [`${req.body.currentUserId}`] } }
+        { likedBy: { $nin: [`${req.body.currentUserId}`] } },
+        { dislikedUsers: { $nin: [`${req.body.currentUserId}`] } }
       ]
     })
   console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ALL', users)
+  res.json(users)
+})
+
+router.post('/sort', async function (req, res, next) {
+  const users = await UserAdd.find(
+    {
+      $and: [
+        { id: { $ne: req.body.currentUserId } },
+        { likedBy: { $nin: [`${req.body.currentUserId}`] } },
+        { dislikedUsers: { $nin: [`${req.body.currentUserId}`] } },
+        { breed: req.body.breed  },
+        { gender: req.body.gender  },
+        { age: req.body.age  },
+      ]
+    })
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>SORT', users)
   res.json(users)
 })
 
@@ -31,7 +48,8 @@ router.post('/likedby', async function (req, res, next) {
       {
         $and: [
           { id: currentUser[0].likedBy[i] },
-          { likedBy: { $nin: [`${currentUser[0].id}`] } }
+          { likedBy: { $nin: [`${currentUser[0].id}`] } },
+          { dislikedUsers: { $nin: [`${req.body.currentUserId}`] } }
         ]
       })
     users.push(user)
@@ -49,7 +67,8 @@ router.post('/match', async function (req, res, next) {
       {
         $and: [
           { id: currentUser[0].likedBy[i] },
-          { likedBy: { $in: [`${currentUser[0].id}`] } }
+          { likedBy: { $in: [`${currentUser[0].id}`] } },
+          { dislikedUsers: { $nin: [`${req.body.currentUserId}`] } }
         ]
       })
     users.push(user)
@@ -74,6 +93,8 @@ router.post('/profileEdited', async function (req, res, next) {
   console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PROFILEEDIT', user)
   user.save()
 })
+
+
 
 module.exports = router;
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './slidercomponent.css';
-// import Header from './additionalComponents/header';
+import Header from './additionalComponents/header';
 import Person from './additionalComponents/prerson';
 // import Lonely from './additionalComponents/lonely';
 // import data from './data.json';
@@ -92,16 +92,17 @@ const Likedbyslider = () => {
           modifySuperficialChoices={modifySuperficialChoices}
           likedUsers={likedUsers}
         />
-      ) : <div></div>
-      // (people &&
+      ) : <div>Вы всем ответили</div>}
+
+      {/* // (people &&
       //   // <div></div>
       //   <Lonely
       //     activeUserImage={people[activeUser].image}
       //     likedUsers={likedUsers}
       //     superLikedUsers={superLikedUsers}
       //   />
-      //   )
-        }
+      //   ) */}
+        
     </div>
   );
 };
