@@ -12,6 +12,7 @@ import "firebase/storage";
     measurementId: "G-QKR892YK2W"
   };
 
+  
 firebase.initializeApp(firebaseConfig);
 
 const storage = firebase.storage();

@@ -4,7 +4,7 @@ const LikedPerson = ({person}) => (
   <div className="liked-person">
     <div className="liked-person-image">
       <img 
-      src={`${person.image}`}
+      src={`misc/${person.image}`}
       alt={`You liked ${person.name}`}
       />
     </div>

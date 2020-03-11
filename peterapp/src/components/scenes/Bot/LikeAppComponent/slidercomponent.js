@@ -1,34 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './slidercomponent.css';
 import Header from './additionalComponents/header';
 import Person from './additionalComponents/prerson';
 import Lonely from './additionalComponents/lonely';
-// import data from './data.json';
-import axios from 'axios'
+import data from './data.json.js';
 
 const Slider = () => {
-
-  const [data, setData] = useState();
   const [people, setPeople] = useState(data);
   const [likedUsers, setLikedUsers] = useState([]);
   const [superLikedUsers, setSuperLikedUsers] = useState([]);
   const [dislikedUsers, setDislikedUsers] = useState([]);
   const activeUser = 0;
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/users');
-        console.log(response.data)
-        setData(response.data);
-        setPeople(response.data);
-      } catch (e) {
-        console.log(e);
-        // setData({ users: data.users, isFetching: false });
-      }
-    };
-    fetchUsers();
-  }, []);
 
   const removedPersonFromDataSrc = (peopleSource, userId) =>
     peopleSource.filter(user => user.id !== userId);
@@ -45,9 +27,6 @@ const Slider = () => {
           newPeople[activeUser].likedUsers.push(userId);
           newLikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/like', {id:userId}) }
-          response()
-
           setLikedUsers(newLikedUsers);
           setPeople(removedPersonFromDataSrc(people, userId));
         }
@@ -57,9 +36,6 @@ const Slider = () => {
           newPeople[activeUser].dislikedUsers.push(userId);
           newDislikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/dislike', {id:userId}) }
-          response()
-
           setDislikedUsers(newLikedUsers);
           setPeople(removedPersonFromDataSrc(people, userId));
         }
@@ -68,9 +44,6 @@ const Slider = () => {
         if (!people[activeUser].superLikedUsers.includes(userId)) {
           newPeople[activeUser].superLikedUsers.push(userId);
           newSuperLikedUsers.push(data[userId]);
-
-          const response = async () => { await axios.post('http://localhost:5000/api/users/superlike', {id:userId}) }
-          response()
 
           setSuperLikedUsers(newSuperLikedUsers);
           setPeople(removedPersonFromDataSrc(people, userId));
@@ -83,23 +56,21 @@ const Slider = () => {
 
   return (
     <div className="app">
-      {/* <Header /> */}
-
-      {people && people[0] ? (
+      <Header />
+      {people[1] ? (
         <Person
-          key={people[0].id}
-          person={people[0]}
+          key={people[1].id}
+          person={people[1]}
           modifySuperficialChoices={modifySuperficialChoices}
           likedUsers={likedUsers}
         />
-      ) : (people &&
-        // <div></div>
+      ) : (
         <Lonely
           activeUserImage={people[activeUser].image}
           likedUsers={likedUsers}
           superLikedUsers={superLikedUsers}
         />
-        )}
+      )}
     </div>
   );
 };

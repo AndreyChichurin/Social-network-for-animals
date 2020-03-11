@@ -5,22 +5,24 @@ const jwt = require('jwt-simple')
 const User = require('../models/user');
 
 router.post('/', async function (req, res, next) {
+
   const userReq = req.body.user
   const email = userReq.email
   const password = userReq.password
+  console.log(userReq, email, password)
 
-  const user = await User.find({ email: email }, { email: 1, password: 1 });
-
+  const user = await User.find({ email: email });
+  console.log(user[0].username)
   bcrypt.compare(password, user[0].password, (err, result) => {
     if (result === true) {
       const token = jwt.encode(email, 'xxx');
       const x = {
         user: {
-          name: user.name,
-          email: user.email
-        },
-        jwt: token
-      };
+          username: user[0].username,
+          email: user[0].email,
+          jwt: token
+        }
+      }
       res.json(x)
     } else {
       return err
@@ -30,3 +32,12 @@ router.post('/', async function (req, res, next) {
 })
 
 module.exports = router
+
+// {"user":{"id":87492,
+// "email":"9632778@gmail.com",
+// "createdAt":"2020-03-09T19:11:04.528Z",
+// "updatedAt":"2020-03-09T19:11:04.534Z",
+// "username":"9632778",
+// "bio":null,
+// "image":null,
+// "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODc0OTIsInVzZXJuYW1lIjoiOTYzMjc3OCIsImV4cCI6MTU4ODk2NTA2NH0.P9tf6VUgUBHi57kxxxuhSekFMoGrRXclQN8LfFlPYXU"}}
