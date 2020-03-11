@@ -22,10 +22,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-
-
 const Navbar = () => {
-  
+
   const classes = useStyles();
 
   return (
@@ -44,12 +42,6 @@ const Navbar = () => {
           </IconButton>
 
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/account" className="navlink">
-              <PeopleOutlineIcon />
-            </NavLink>
-          </IconButton>
-
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <NavLink to="/chat" className="navlink">
               <ChatIcon />
             </NavLink>
@@ -60,19 +52,35 @@ const Navbar = () => {
             EXIT
           </Button>
         </span> */}
+          {/* {(!localStorage.token) ? */}
+          {/* <div>
+              <NavLink to='/login' exact>
+                <Button variant="contained" color="inherit">
+                  Sign In
+                      </Button>
+              </NavLink>
+
+              <NavLink to='/register' exact>
+                <Button variant="contained" color="inherit">
+                  Sign Up
+                      </Button>
+              </NavLink>
+            </div>
+            : */}
+
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <NavLink to="/account" className="navlink">
+              <PeopleOutlineIcon />
+            </NavLink>
+          </IconButton>
 
           <NavLink to='/login' exact>
             <Button variant="contained" color="inherit">
               Sign In
-            </Button>
+                      </Button>
           </NavLink>
 
-          <NavLink to='/register' exact>
-            <Button variant="contained" color="inherit">
-              Sign Up
-            </Button>
-          </NavLink>
-
+          {/* } */}
         </Toolbar>
       </AppBar>
     </div>

@@ -6,15 +6,21 @@ import Routes from './components/Routes/Routes';
 
 import { Provider } from 'react-redux';
 import { store } from '../src/components/scenes/Bot/Bot/chat'
+import { CurrentUserProvider } from './contexts/currentUser'
+// import CurrentUserChecker from './components/currentUserChecker';
 
 const App = () => {
   return (
-    <Provider store={store}>
-    <Router>
-      <Navbar />
-      <Routes />
-    </Router>
-    </Provider>
+    <CurrentUserProvider>
+  
+      <Provider store={store}>
+        <Router>
+          <Navbar />
+          <Routes />
+        </Router>
+      </Provider>
+
+    </CurrentUserProvider>
   );
 }
 

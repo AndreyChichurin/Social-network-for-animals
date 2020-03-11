@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
+import axios from 'axios'
+
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -36,11 +38,33 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function PersonalPage() {
+
   const classes = useStyles();
+
+  const [likedBy, setLikedBy] = useState();
+  const [superLikedBy, setSuperLikedBy] = useState();
+  const [like, setLike] = useState();
+  const [superLike, setSuperLike] = useState();
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/users');
+        console.log(response.data)
+        setData(response.data);
+      } catch (e) {
+        console.log(e);
+        // setData({ users: data.users, isFetching: false });
+      }
+    };
+    fetchUsers();
+  }, []);
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.paper} backgro>
+
+
+      {/* <Paper className={classes.paper} backgro>
         <Grid container spacing={2}>
 
           <Grid item>
@@ -91,7 +115,7 @@ export default function PersonalPage() {
           </Grid>
           <AnnouncementForm />
         </Grid>
-      </Paper>
+      </Paper> */}
     </div>
   );
 }
