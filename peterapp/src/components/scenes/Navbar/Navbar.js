@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Navbar.css'
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -13,12 +14,14 @@ import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import ChatIcon from '@material-ui/icons/Chat';
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(4),
+    
   },
   title: {
     flexGrow: 1,
@@ -37,25 +40,26 @@ const Navbar = () => {
   }
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="transparent">
         <Toolbar>
 
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
             {/* <MenuIcon /> */}
           </IconButton>
 
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/" className="navlink" exact>
-              <HomeIcon />
+            <div className="ButtonNav">
+            <NavLink to="/" className="navlink" exact >
+             <p className="ButtonNav">Главная</p>
             </NavLink>
-          </IconButton>
-
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/likedby" className="navlink">
-              <ChatIcon />
+            
+            </div>
+            <div className="ButtonNav">
+         
+            <NavLink to="/likedby" className="navlink" >
+              <div><p className="ButtonNav">Вас лайкнули</p></div>
             </NavLink>
-          </IconButton>
-
+       
+            </div>
           {/* <span color='green'>
           <Button variant="contained" color="inherit" href='/logout'>
             EXIT
@@ -76,18 +80,19 @@ const Navbar = () => {
               </NavLink>
             </div>
             : */}
-
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/match" className="navlink">
-              <PeopleOutlineIcon />
+            <div className="ButtonNav">
+          
+            <NavLink to="/match" className="navlink" >
+              <div><p className="ButtonNav">Пары</p></div>
             </NavLink>
-          </IconButton>
+            
+          </div>
 
 
-          <NavLink to='/login' exact>
-            <Button variant="contained" color="inherit">
-              Sign In
-                      </Button>
+          <NavLink to='/login' exact className="navlink" >
+            
+              <div className="ButtonNav">Sign In</div>
+                      
           </NavLink>
 
 
