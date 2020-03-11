@@ -20,6 +20,9 @@ import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom'
 // import pink from '@material-ui/core/Pink'
 import AnnouncementForm from "../AnnouncementForm/AnnouncementForm"
+import Person from  '../LikeAppComponent/additionalComponents/prerson.js'
+import Lonely from '../LikeAppComponent/additionalComponents/lonely'
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -63,11 +66,13 @@ export default function PersonalPage() {
   const [superLikedBy, setSuperLikedBy] = useState();
   const [like, setLike] = useState();
   const [superLike, setSuperLike] = useState();
+  const activeUser = 0;
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/users');
+        const response = await axios.get('http://localhost:5000/api/likeby');
+       
         console.log(response.data)
         // setData(response.data);
       } catch (e) {
@@ -77,76 +82,28 @@ export default function PersonalPage() {
     };
     fetchUsers();
   }, []);
+  
 
+  const people =  axios.get('http://localhost:5000/api/likedby')
+  console.log(people)
   return (
-
-
-
-
-{/* //       {<Paper className={classes.paper} backgro>
-
-//       <Paper className={classes.paper} backgro>
-//         Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя} */}
-
-{/* //         <Grid container spacing={2}>
-
-//           <Grid item>
-//             <ButtonBase className={classes.image}>
-//               <img className={classes.img} alt="complex" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRb1rbKH9VCUTzbqNwyRaVVoz5CFto6NTy5EHBxwnAd9kc4oUe7" />
-//             </ButtonBase>
-//           </Grid>
-
-//           <Grid item xs={6} sm container >
-//             <Grid item xs container direction="column" spacing={3} >
-//               <Grid item xs> */}
-//                 {/* <ul>
-//                   <li>Name</li>
-//                   <li>LastName</li>
-//                   <li>Phone</li>
-//                   <li>Hobby</li>
-
-//                 </ul> */}
-{/* //                  <List component="nav" className='ListPersonalCard' aria-label="mailbox folders">
-//       <ListItem>
-//         Ф.И.О. <span>{" "}</span>
-//         <ListItemText primary="Андрей Андреевич Щукин" />
-//       </ListItem>
-//       <Divider />
-//       <ListItem>
-//         Город/Страна <span></span>
-//         <ListItemText primary="Петербург" />
-//       </ListItem>
-//     <Divider light />
-//       <ListItem>
-//         О Себе/Питомцах <span></span>
-//         <ListItemText primary="Мои питомцы ищет пару и хорошего хозяина или хозяйку, чтобы во время их утех не скучали." />
-//       </ListItem>
-//     </List>
-                
-//               </Grid>
-              
-//                   <IconButton aria-label="delete"className="addButton">
-//                     <GitHubIcon className="addButonFlex" /> 
-//                   </IconButton>              
-//             </Grid>             */}
-{/* //           </Grid>
-//         </Grid> */}
-
-
-{/* //       </Paper>
-//       <div className={classes.block}>
-//       <NavLink to='/announcement'>
-//         <Button className={classes.button} variant="contained" size="small" color="secondary" >   
-//            Добавить объявление
-//         </Button>
-//         </NavLink>
-//         <Button className={classes.button} variant="contained" size="small" color="primary" >
-//            Избранные
-//         </Button> */}
-
-        
-        </div>
-
-   
-  );
-}
+      <div className="app">
+    
+    {people && people[0] ? (
+        <Person
+          key={people[0].id}
+          person={people[0]}
+          // modifySuperficialChoices={modifySuperficialChoices}
+          likedBy={likedBy}
+        />
+      ) : (people &&
+        // <div></div>
+        <Lonely
+          activeUserImage={people[activeUser].image}
+          like={like}
+          superLikedBy={superLikedBy}
+        />
+        )}
+    </div>
+  )
+      }
