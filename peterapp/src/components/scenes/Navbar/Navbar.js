@@ -11,6 +11,8 @@ import LogoutButton from "./LogoutButton"
 import HomeIcon from '@material-ui/icons/Home';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import ChatIcon from '@material-ui/icons/Chat';
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import './navbar.css';
 
 
 const useStyles = makeStyles(theme => ({
@@ -36,10 +38,9 @@ const Navbar = () => {
     loginButton = <LogoutButton />;
   }
   return (
-    <div className={classes.root}>
+    <div className="nav-style">
       <AppBar position="static" color="default">
         <Toolbar>
-
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
             {/* <MenuIcon /> */}
           </IconButton>
@@ -83,12 +84,13 @@ const Navbar = () => {
             </NavLink>
           </IconButton>
 
-
-          <NavLink to='/login' exact>
-            <Button variant="contained" color="inherit">
-              Sign In
-                      </Button>
-          </NavLink>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <NavLink to='/login' exact>
+              <MeetingRoomIcon variant="contained" color="inherit"> variant="contained" color="inherit">
+                Sign In
+              </MeetingRoomIcon>
+            </NavLink>
+          </IconButton>
 
 
           {/* } */}
