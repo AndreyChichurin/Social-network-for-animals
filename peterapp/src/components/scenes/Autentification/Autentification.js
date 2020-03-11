@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Redirect } from 'react-router-dom'
 
 import useFetch from '../../../hooks/useFetch'
 import useLocalStorage from '../../../hooks/useLocalStorage'
+import {CurrentUserContext} from '../../../contexts/currentUser'
+
 
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
@@ -45,8 +47,9 @@ const Autentication = props => {
   const [{ response, isLoading }, doFetch] = useFetch(apiUrl)
   const [isSuccessfulSubmit, setIsSuccessfulSubmit] = useState(false)
   const [token, setToken] = useLocalStorage('token')
+  const [currentUserState, setCurrentUserState] = useContext(CurrentUserContext)
 
-  console.log('token', token)
+  console.log('currentUserState', currentUserState)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -66,7 +69,13 @@ const Autentication = props => {
     }
     setToken(response.user.jwt)
     setIsSuccessfulSubmit(true)
-  }, [response, setToken])
+    setCurrentUserState(state => ({
+      ...state,
+      isLoading: false,
+      isLoggedIn: true,
+      currentUser: response.user
+    }))
+  }, [response, setToken, setCurrentUserState])
 
   const classes = useStyles();
 
