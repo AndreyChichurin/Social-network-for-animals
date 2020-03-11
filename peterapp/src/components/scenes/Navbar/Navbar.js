@@ -51,7 +51,7 @@ const Navbar = () => {
           </IconButton>
 
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/chat" className="navlink">
+            <NavLink to="/likedby" className="navlink">
               <ChatIcon />
             </NavLink>
           </IconButton>
@@ -78,7 +78,7 @@ const Navbar = () => {
             : */}
 
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/account" className="navlink">
+            <NavLink to="/match" className="navlink">
               <PeopleOutlineIcon />
             </NavLink>
           </IconButton>
