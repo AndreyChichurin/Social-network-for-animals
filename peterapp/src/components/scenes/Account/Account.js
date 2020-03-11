@@ -10,6 +10,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import PictureUploader from '../../../firebase/imageuploader'
 
 import AnnouncementForm from '../AnnouncementForm/AnnouncementForm'
 
@@ -42,10 +43,11 @@ export default function PersonalPage() {
     <div className={classes.root}>
       <Paper className={classes.paper} backgro>
         <Grid container spacing={2}>
+          <PictureUploader/> 
 
           <Grid item>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src="https://i0.wp.com/tailytales.ru/wp-content/uploads/2019/04/dogs-9.jpg?w=850" />
+              <img className={classes.img} alt="complex" src="this.state.url" />
             </ButtonBase>
           </Grid>
 
