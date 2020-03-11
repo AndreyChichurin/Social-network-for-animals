@@ -51,7 +51,7 @@ export default function PersonalPage() {
       try {
         const response = await axios.get('http://localhost:5000/api/users');
         console.log(response.data)
-        setData(response.data);
+        // setData(response.data);
       } catch (e) {
         console.log(e);
         // setData({ users: data.users, isFetching: false });
