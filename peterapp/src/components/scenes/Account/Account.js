@@ -14,10 +14,13 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import GitHubIcon from '@material-ui/icons/GitHub';
+
+
 import Button from '@material-ui/core/Button';
 import { NavLink } from 'react-router-dom'
 // import pink from '@material-ui/core/Pink'
 import AnnouncementForm from "../AnnouncementForm/AnnouncementForm"
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -76,7 +79,7 @@ export default function PersonalPage() {
   }, []);
 
   return (
-    <div className={classes.root}>
+
 
 
 

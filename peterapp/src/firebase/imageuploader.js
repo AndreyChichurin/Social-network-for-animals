@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import storage from "./index";
 
+
 class ImageUpload extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,9 @@ class ImageUpload extends Component {
       url: "",
       progress: 0
     };
-  }
+  }; 
+
+ 
 
   handleChange = e => {
     if (e.target.files[0]) {
@@ -82,6 +85,7 @@ class ImageUpload extends Component {
           height="300"
           width="400"
         />
+     
       </div>
     );
   }
