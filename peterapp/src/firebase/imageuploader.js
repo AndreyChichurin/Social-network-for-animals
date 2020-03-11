@@ -53,7 +53,7 @@ class ImageUpload extends Component {
     return (
       <div className="center">
           <br/>
-          <h2 className="green-text">React Firebase Image Uploader</h2>
+          <h2 className="green-text"> Image Uploader</h2>
           <br/>
           <br/>
         <div className="row">

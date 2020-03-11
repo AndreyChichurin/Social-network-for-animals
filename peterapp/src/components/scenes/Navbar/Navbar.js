@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Navbar.css'
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -15,12 +16,14 @@ import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import './navbar.css';
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(4),
+    
   },
   title: {
     flexGrow: 1,
@@ -38,42 +41,65 @@ const Navbar = () => {
   //   loginButton = <LogoutButton />;
   // }
   return (
-    <div className="nav-style">
-      <AppBar position="static" color="default">
+
+    <div className={classes.root}>
+      <AppBar position="static" color="transparent">
         <Toolbar>
 
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/" className="navlink" exact>
-              <HomeIcon />
-            </NavLink>
+          <IconButton edge="start" className={classes.menuButton} aria-label="menu">
+            {/* <MenuIcon /> */}
           </IconButton>
 
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/likedby" className="navlink">
-              <ChatIcon />
+            <div className="ButtonNav">
+            <NavLink to="/" className="navlink" exact >
+             <p className="ButtonNav">Главная</p>
+
             </NavLink>
-          </IconButton>
-
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to="/match" className="navlink">
-              <PeopleOutlineIcon />
+            
+            </div>
+            <div className="ButtonNav">
+         
+            <NavLink to="/likedby" className="navlink" >
+              <div><p className="ButtonNav">Вас лайкнули</p></div>
             </NavLink>
-          </IconButton>
 
-
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <NavLink to='/login' exact>
-              <MeetingRoomIcon variant="contained" color="inherit"> variant="contained" color="inherit">
-                Sign In
-              </MeetingRoomIcon>
-            </NavLink>
-          </IconButton>
-
-
-          <NavLink to='/account' exact>
-            <Button variant="contained" color="inherit">
-              Edit account
+       
+            </div>
+          {/* <span color='green'>
+          <Button variant="contained" color="inherit" href='/logout'>
+            EXIT
+          </Button>
+        </span> */}
+          {/* {(!localStorage.token) ? */}
+          {/* <div>
+              <NavLink to='/login' exact>
+                <Button variant="contained" color="inherit">
+                  Sign In
                       </Button>
+              </NavLink>
+
+              <NavLink to='/register' exact>
+                <Button variant="contained" color="inherit">
+                  Sign Up
+                      </Button>
+              </NavLink>
+            </div>
+            : */}
+            <div className="ButtonNav">
+          
+            <NavLink to="/match" className="navlink" >
+              <div><p className="ButtonNav">Пары</p></div>
+
+            </NavLink>
+            
+          </div>
+
+
+
+          <NavLink to='/login' exact className="navlink" >
+            
+              <div className="ButtonNav">Sign In</div>
+
           </NavLink>
 
         </Toolbar>
