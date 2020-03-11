@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from 'react-router-dom'
 import "./announcementForm.css";
 
 export default class AnnouncementForm extends Component {
@@ -192,9 +193,11 @@ export default class AnnouncementForm extends Component {
               Отправить
             </button>
           </div>
-          <button className="modal-close" type="button">
-            Закрыть
+          <NavLink to="/account" className="navlink">
+          <button className="modal-close" type="button" onClick="window.location.href='/account'">
+            
           </button>
+          </NavLink>
         </form>
       </section>
     );

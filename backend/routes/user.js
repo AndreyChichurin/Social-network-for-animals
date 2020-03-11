@@ -8,21 +8,20 @@ router.post('/', function (req, res, next) {
   const userReq = req.body.user
   const passwordToSave = bcrypt.hashSync(userReq.password, bcrypt.genSaltSync(10))
   const user = new User({
-    name: userReq.name,
+    username: userReq.username,
     email: userReq.email,
     password: passwordToSave,
   })
   const token = jwt.encode(user.email, 'xxx');
   const x = {
     user: {
-      name: user.name,
-      email: user.email
-    },
-    jwt: token
-  };
-  user.save(function (err) {
-      res.json(x)
+      username: user.name,
+      email: user.email,
+      jwt: token
     }
+  }
+  user.save().then(
+    res.json(x)
   )
 })
 

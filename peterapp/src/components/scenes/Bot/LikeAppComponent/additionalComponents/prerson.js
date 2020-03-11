@@ -8,7 +8,7 @@ const Person = ({ person , modifySuperficialChoices}) => {
     <>
     <div className='person'>
       <div className="person-photo">
-        <img src={`${image}`} alt={name} />
+        <img src={`misc/${image}`} alt={name} />
       </div>
       <div className="person-description">
         <p className="person-name-age">
