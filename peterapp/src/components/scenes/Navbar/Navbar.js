@@ -32,11 +32,14 @@ const Navbar = () => {
   const classes = useStyles();
 
   let loginButton;
+  let accountbutton
   if (localStorage.token) {
     loginButton = <LoginButton />;
+    //accountbutton =
   } else {
     loginButton = <LogoutButton />;
   }
+  
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
