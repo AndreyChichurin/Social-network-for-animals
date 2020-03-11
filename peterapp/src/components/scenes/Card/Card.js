@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 
 export default function MediaCard(animal) {
   const classes = useStyles();
-  const  { name, desc, age , location } = animal;
+  const  { name, desc, age , location, image, description } = animal;
   // const  { image, color  } = animal;
 
   return (
@@ -31,7 +31,7 @@ export default function MediaCard(animal) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image='https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/12/20/10/istock-1128787444.jpg'
+          image={image}
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -39,7 +39,7 @@ export default function MediaCard(animal) {
             {name}, <span>{age}</span>, <span>{location}</span>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Masha likes group across all continents except Antarctica{desc}
+            {description}{desc}
           </Typography>
         </CardContent>
       </CardActionArea>

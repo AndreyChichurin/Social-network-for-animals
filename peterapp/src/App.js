@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Navbar from './components/scenes/Navbar/Navbar'
+
 import Routes from './components/Routes/Routes';
 
 import { Provider } from 'react-redux';
