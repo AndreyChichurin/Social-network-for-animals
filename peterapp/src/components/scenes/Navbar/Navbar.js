@@ -13,7 +13,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import ChatIcon from '@material-ui/icons/Chat';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
-import './navbar.css';
+
 
 
 
@@ -43,8 +43,8 @@ const Navbar = () => {
   return (
 
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
+      <AppBar position="static" color="transparent" margin-bottom="50">
+        <Toolbar className="appBar">
 
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
             {/* <MenuIcon /> */}

@@ -6,7 +6,7 @@ const Person = ({ person , modifySuperficialChoices}) => {
 
   return (
     <>
-    <div className='person'>
+    <div className='person' style={{boxShadow:'10px 10px 15px #9E9E9E', marginTop:'50px'}}>
       <div className="person-photo">
         <img src={`${image}`} alt={name} />
       </div>
