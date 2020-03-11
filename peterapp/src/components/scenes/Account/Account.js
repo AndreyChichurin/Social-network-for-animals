@@ -83,12 +83,12 @@ export default function PersonalPage() {
 
 
 
-{/* //       {<Paper className={classes.paper} backgro>
+// {/* //       {<Paper className={classes.paper} backgro>
 
-//       <Paper className={classes.paper} backgro>
-//         Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя} */}
+// //       <Paper className={classes.paper} backgro>
+// //         Username {/* Тут по идее должен быть лоигн зарегистрировавшегося пользователя} */}
 
-{/* //         <Grid container spacing={2}>
+// {/* //         <Grid container spacing={2}>
 
 //           <Grid item>
 //             <ButtonBase className={classes.image}>
@@ -125,27 +125,27 @@ export default function PersonalPage() {
                 
 //               </Grid>
               
-//                   <IconButton aria-label="delete"className="addButton">
-//                     <GitHubIcon className="addButonFlex" /> 
-//                   </IconButton>              
-//             </Grid>             */}
-{/* //           </Grid>
-//         </Grid> */}
+// //                   <IconButton aria-label="delete"className="addButton">
+// //                     <GitHubIcon className="addButonFlex" /> 
+// //                   </IconButton>              
+// //             </Grid>             */}
+// {/* //           </Grid>
+// //         </Grid> */}
 
 
-{/* //       </Paper>
-//       <div className={classes.block}>
-//       <NavLink to='/announcement'>
-//         <Button className={classes.button} variant="contained" size="small" color="secondary" >   
-//            Добавить объявление
-//         </Button>
-//         </NavLink>
-//         <Button className={classes.button} variant="contained" size="small" color="primary" >
-//            Избранные
-//         </Button> */}
+// {/* //       </Paper>
+// //       <div className={classes.block}>
+// //       <NavLink to='/announcement'>
+// //         <Button className={classes.button} variant="contained" size="small" color="secondary" >   
+// //            Добавить объявление
+// //         </Button>
+// //         </NavLink>
+// //         <Button className={classes.button} variant="contained" size="small" color="primary" >
+// //            Избранные
+// //         </Button> */}
 
         
-        </div>
+//         </div>
 
    
   );
