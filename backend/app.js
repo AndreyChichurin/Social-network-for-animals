@@ -16,7 +16,7 @@ const cors = require('cors');
 const userRouter = require('./routes/user');
 const loginRouter = require('./routes/login');
 const usersRouter = require('./routes/users');
-const likedByRouter = require('./routes/likedby');
+
 
 
 mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.net/test?retryWrites=true&w=majority", {
@@ -38,6 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/login', loginRouter);
 app.use('/api/users', usersRouter);
-app.use('/api/likedby', likedByRouter);
+
 
 module.exports = app;
