@@ -35,7 +35,7 @@ export default () => (
           <div className='ContainerMain'>
 
             <ControlledOpenSelect />
-            <Box display='flex' justifyContent="rigth" flexWrap="wrap">
+            <Box display='flex' justifyContent="right" flexWrap="wrap">
               <MediaCard 
               name="Masha" 
               age='5' 

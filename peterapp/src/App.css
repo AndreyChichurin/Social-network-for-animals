@@ -94,3 +94,6 @@ ControlledOpenSelect{
   display: flex;
   flex-direction: row;
 }
+.Link{
+  text-decoration: none;
+}

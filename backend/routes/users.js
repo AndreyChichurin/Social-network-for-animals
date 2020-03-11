@@ -22,7 +22,7 @@ router.post('/dislike', async function (req, res, next) {
   const user = await UserAdd.find(req.body)
   console.log(user)
   user[0].dislikedUsers.push()
-  res.json(users)
+  res.json(user)
 })
 
 router.post('/superlike', async function (req, res, next) {
@@ -30,7 +30,7 @@ router.post('/superlike', async function (req, res, next) {
   const user = await UserAdd.find(req.body)
   console.log(user)
   user[0].superLikedUsers.push()
-  res.json(users)
+  res.json(user)
 })
 
 module.exports = router; 

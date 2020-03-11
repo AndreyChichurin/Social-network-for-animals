@@ -188,7 +188,12 @@ header .fl:last-child {
 .pulse:hover {
   animation: none;
 }
+a:-webkit-any-link{
+	color: red;
+	cursor: pointer;
+	text-decoration: none;
 
+}
 @-webkit-keyframes pulse {
   0% {
 		-webkit-box-shadow: 0 0 0 0 rgba(241, 201, 202, 0.4);
