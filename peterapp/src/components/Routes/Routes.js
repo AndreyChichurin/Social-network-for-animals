@@ -7,6 +7,7 @@ import Account from '../scenes/Account/Account'
 import Autentification from '../scenes/Autentification/Autentification'
 import Match from '../scenes/Match/Match'
 import AccountEdit from '../scenes/AnnouncementForm/AnnouncementForm'
+import LandingPage from '../scenes/LandingPage/LandingPage';
 
 export default () => {
   return (
@@ -16,6 +17,7 @@ export default () => {
       <Route path="/match" component={Match} />
       <Route path="/login" component={Autentification} />
       <Route path="/account" component={AccountEdit} />
+      <Route path="/LandingPage" component={LandingPage} />
     </Switch>
   )
 }
