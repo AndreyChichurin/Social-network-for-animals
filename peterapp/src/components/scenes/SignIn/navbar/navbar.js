@@ -40,7 +40,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ChatIcon from "@material-ui/icons/Chat";
 import Pink from "@material-ui/core/colors/pink";
 import Navbarlink from "../../../navbarLink";
-import "./navbar.css";
+import "../../../../index.css";
 
 const pink = "Pink[100]";
 const useStyles = makeStyles(theme => ({
