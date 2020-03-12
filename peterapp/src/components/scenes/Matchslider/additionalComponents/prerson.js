@@ -2,7 +2,8 @@ import React from 'react';
 import Actions from './actions';
 
 const Person = ({ person , modifySuperficialChoices}) => {
-  const { name, desc, age , image } = person;
+  const { name, desc, age , image, email, phone } = person;
+  console.log(person)
 
   return (
     <>
@@ -15,6 +16,8 @@ const Person = ({ person , modifySuperficialChoices}) => {
           {name}, <span>{age}</span>
         </p>
         <p className="person-info">{desc}</p>
+        <p className="person-info">{email}</p>
+        <p className="person-info">{phone}</p>
       </div>
     </div>
     <Actions

@@ -53,6 +53,7 @@ const Autentication = props => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', event)
     console.log(email, password)
     const user = isLogin ? { email, password } : { email, password, username }
     doFetch({
