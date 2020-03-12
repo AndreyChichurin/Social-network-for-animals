@@ -22,12 +22,14 @@ class Bot extends Component {
     const {feed, sendMessage} = this.props;
     console.log(feed)
     return (
-    <div>
-      <h1>Hello Bot!</h1>
+      <div className="chatbot">
+    <div >
+      <h1>Привет, я чат бот</h1>
       <ul>
       { feed.map( entry => <li>{entry.text}</li>) }
       </ul>
       <input type="text" onKeyDown={(e)=> e.keyCode === 13 ? sendMessage(e.target.value) : null}/>
+    </div>
     </div>
     );
   }

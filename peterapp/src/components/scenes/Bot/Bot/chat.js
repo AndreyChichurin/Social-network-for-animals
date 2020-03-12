@@ -29,7 +29,7 @@ const messageMiddleware = () => next => action => {
     }
 };
 
-const initState =[{text:'hey'}];
+const initState =[{text:'Привет!'}];
 const messageReducer=(state=initState,action)=>{
   switch(action.type){
     case ON_MESSAGE:
