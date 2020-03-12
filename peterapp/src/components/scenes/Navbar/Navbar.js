@@ -18,6 +18,7 @@ import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 
 const useStyles = makeStyles(theme => ({
+
   root: {
     flexGrow: 1,
   },
@@ -43,7 +44,7 @@ const Navbar = () => {
   return (
 
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
+      <AppBar className="appBarNav" position="static" color="transparent">
         <Toolbar>
 
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
