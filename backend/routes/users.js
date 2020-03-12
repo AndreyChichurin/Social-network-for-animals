@@ -94,7 +94,14 @@ router.post('/profileEdited', async function (req, res, next) {
   user.save()
 })
 
-
+router.post('/infoFromMail', async function (req, res, next) {
+  const userTo = await UserAdd.find({ id: req.body.id })
+  const userFrom = await UserAdd.find({ id: req.body.currentUserId })
+  const users = [userTo, userFrom]
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>userTo', userTo)
+  console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>userFrom', userFrom)
+  res.json(users)
+})
 
 module.exports = router;
 

@@ -12,8 +12,8 @@ function Chat(props) {
   
   
   const [chat, setChat] = useState(null);
-  const chatRoom = database.ref().child(`${chatRoomName}`);
-  const chatRoomName = `${sender} +${sender2} `; 
+  const chatRoom = database.ref().child(`${chat}`);
+  // const chatRoomName = `${sender} +${sender2} `; 
 
 
   useEffect(() => {
