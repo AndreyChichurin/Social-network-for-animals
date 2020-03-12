@@ -84,15 +84,18 @@ const Likedbyslider = () => {
   return (
     <div className="app">
       {/* <Header /> */}
-
-      {people && people[0] ? (
+      {people && people.map(elem => {
+          return <div>
+      
         <Person
-          key={people[0].id}
-          person={people[0]}
+          key={elem.id}
+          person={elem}
           modifySuperficialChoices={modifySuperficialChoices}
           likedUsers={likedUsers}
         />
-      ) : <div>Вы всем ответили</div>}
+        </div>
+      })}
+      {/* <div>Вы всем ответили</div>} */}
 
       {/* // (people &&
       //   // <div></div>
