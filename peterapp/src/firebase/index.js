@@ -19,5 +19,5 @@ const storage = firebase.storage();
 const database = firebase.database()
 
 export { database, firebase,storage as default };
->>>>>>> e4f75fb89b987f11f16a7d2566e0f963e8058534
+
 
