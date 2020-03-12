@@ -94,8 +94,7 @@ const Slider = () => {
   };
 
   return (
-    <div>
-      <header>
+    <div className='container'>
         <section className="Announcement-box">
           <h1 className="form-hedline">Отфильтруй собачек</h1>
           <form className="announcement-form" onSubmit={handleSubmit}>
@@ -104,7 +103,7 @@ const Slider = () => {
                 <div className="announcement-position">
                   <fieldset className="fieldset-style">
                     <label>
-                      <legend className="legend-style">Выберете пароду:</legend>
+                      <legend className="legend-style">Выберете породу:</legend>
                       <select required className="announcement-form-select" name="breed" onChange={(event) => setBreed(event.target.value)}>
                         <option value=""></option>
                         <option value="Аляскинский маламут">Аляскинский маламут</option>
@@ -234,7 +233,6 @@ const Slider = () => {
 
         </section>
 
-      </header>
       <div className="app">
 
 
