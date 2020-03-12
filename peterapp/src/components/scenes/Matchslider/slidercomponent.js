@@ -5,8 +5,9 @@ import Person from './additionalComponents/prerson';
 // import Lonely from './additionalComponents/lonely';
 // import data from './data.json';
 import axios from 'axios'
+import Chat from '../../chat/chat'
 
-const Matchslider = () => {
+const Matchslider = (props) => {
 
   const [data, setData] = useState();
   const [people, setPeople] = useState(data);
@@ -14,6 +15,7 @@ const Matchslider = () => {
   const [superLikedUsers, setSuperLikedUsers] = useState([]);
   const [dislikedUsers, setDislikedUsers] = useState([]);
   const activeUser = 0;
+  
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -85,6 +87,8 @@ const Matchslider = () => {
     <div className="app">
       {/* <Header /> */}
 
+      
+
       {people && people.map(elem => {
         return <div>
           <Person
@@ -93,6 +97,9 @@ const Matchslider = () => {
             modifySuperficialChoices={modifySuperficialChoices}
             likedUsers={likedUsers}
           />
+          
+          <Chat sender={localStorage.id}/>
+      
         </div>
       }
       )};
