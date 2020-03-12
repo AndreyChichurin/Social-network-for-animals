@@ -2,17 +2,17 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 // import LoginButton from "./LoginButton"
 // import LogoutButton from "./LogoutButton"
-import HomeIcon from '@material-ui/icons/Home';
-import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import ChatIcon from '@material-ui/icons/Chat';
-import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+// import HomeIcon from '@material-ui/icons/Home';
+// import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+// import ChatIcon from '@material-ui/icons/Chat';
+// import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 
 
@@ -52,7 +52,7 @@ const Navbar = () => {
           </IconButton>
 
             <div className="ButtonNav">
-            <NavLink to="/" className="navlink" exact >
+            <NavLink to="/home" className="navlink" exact >
              <p className="ButtonNav">Главная</p>
 
             </NavLink>

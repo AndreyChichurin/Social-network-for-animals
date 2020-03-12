@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../../../index.css'
 // import Header from './additionalComponents/header';
 import Person from './additionalComponents/prerson';
+
 // import Lonely from './additionalComponents/lonely';
 // import data from './data.json';
 import axios from 'axios'
