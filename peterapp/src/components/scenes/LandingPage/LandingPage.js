@@ -1,6 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 const LandingPage = () => {
   return (
     <div>
@@ -41,9 +42,9 @@ const LandingPage = () => {
       </div>
       <div className="button-box">
           <div >
-            <Link to="/login" className="navlink navlink-left" exact>
+            <NavLink to="/login" className="navlink navlink-left" exact>
                 <p className="ButtonNav button-box-item navlink-left">войти</p>
-            </Link>
+            </NavLink>
           </div>
           <Link to="/" className="navlink" exact>
             <p className="ButtonNav button-box-item">регистрация</p>
