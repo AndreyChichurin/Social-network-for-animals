@@ -79,6 +79,17 @@
   text-align: center;
   z-index: 50;
 }
+.titleHeader-absolute {
+    text-shadow : 20px 10px 10px #3b2338;
+    display: block;
+    color: rgb(218, 6, 182);
+    font-size: 175px;
+    font-family: 'Vogue', bold;
+    margin: 50px;
+    width: 840px;
+    text-align: center;
+    z-index: 50;
+  }
 .titleHeader-box {
     display:flex;
     justify-content: center;
@@ -86,7 +97,7 @@
     
 }
 .button-box-item {
-    border: 2px solid rgb(28, 236, 28);
+    border: 2px solid rgb(164, 155, 177);
     width: 250px;
     box-sizing: border-box;
     padding: 8px;
