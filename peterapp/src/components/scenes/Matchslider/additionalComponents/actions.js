@@ -1,7 +1,7 @@
 import React from 'react'
 // import Rewind from './actionsSlider/rewind'
 import Dislike from './actionsSlider/dislike'
-import Like from './actionsSlider/like'
+// import Like from './actionsSlider/like'
 // import Superlike from './actionsSlider/superlike'
 
 const Actions =({person, modifySuperficialChoices}) => (
