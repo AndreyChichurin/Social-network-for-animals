@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom'
-import "./announcementForm.css";
+import "../../../index.css";
 import axios from 'axios'
 
 const AnnouncementForm = () => {
