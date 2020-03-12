@@ -7,6 +7,7 @@ import Lonely from './additionalComponents/lonely';
 // import data from './data.json';
 import axios from 'axios'
 
+
 const Slider = () => {
 
   const [data, setData] = useState();

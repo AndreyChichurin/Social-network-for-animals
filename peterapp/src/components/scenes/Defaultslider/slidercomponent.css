@@ -32,9 +32,10 @@ header {
 	overflow: hidden;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: start;
 	padding: 10px 5px;
 	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+
 }
 
 header button {
@@ -207,4 +208,7 @@ header .fl:last-child {
 		-moz-box-shadow: 0 0 35px 35px rgba(241, 201, 202, 0);
 		box-shadow: 0 0 35px 35px rgba(241, 201, 202, 0);
   }
+}
+.Announcement-box{
+	width: 500px;
 }
