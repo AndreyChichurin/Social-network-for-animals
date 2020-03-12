@@ -7,6 +7,7 @@ function Chat(props) {
   const [nickname, setNickname] = useState('');
   const [msg, setMsg] = useState('');
   const [messages, setMessages] = useState({});
+  
   const sender = props.sender;
   const sender2 = props.sender;
   
@@ -61,7 +62,7 @@ function Chat(props) {
             </div>
             <div>
             <input placeholder="write here" onChange={handleMsgChange} value={msg} /><br />
-            <button onClick={handleKeyDown}>Send</button>
+            <button class="button button-outline" onClick={handleKeyDown}>Send</button>
             </div>
           </div>
     </div>

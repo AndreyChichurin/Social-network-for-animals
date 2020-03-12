@@ -271,7 +271,7 @@ const Slider = () => {
                 </label>
               </fieldset>
             </div>
-          {/* </div> */}
+          </div>
           <div className="btn-box">
             <button className="form-button" type="submit">
               Отправить
