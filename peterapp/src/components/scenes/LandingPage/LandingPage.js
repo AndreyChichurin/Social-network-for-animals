@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPage.css";
+import '../../../index.css'
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom'
 const LandingPage = () => {
@@ -33,6 +33,11 @@ const LandingPage = () => {
             }}
           ></div>
         </div>
+      </div>
+      <div className="titleHeader-box">
+        <h1 className="titleHeader-absolute">
+          PUG PUG
+        </h1>
       </div>
       <div className="titleHeader-box">
         <h1 className="titleHeader">

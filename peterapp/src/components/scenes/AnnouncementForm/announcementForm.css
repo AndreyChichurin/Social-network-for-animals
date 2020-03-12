@@ -200,9 +200,6 @@
 
 }
 
-.loh3 {
-	width: 500px;
-}
 
 .photo-box {
 	display: flex;
@@ -247,4 +244,11 @@
 
 .modal-close::after {
 	transform: rotate(-45deg);
+}
+
+.container {
+	width: 1640px;
+	margin: 0 auto;
+	padding: 0 20px;
+
 }

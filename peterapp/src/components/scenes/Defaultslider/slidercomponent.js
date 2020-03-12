@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom'
-import './slidercomponent.css';
-import Header from './additionalComponents/header';
-import Person from './additionalComponents/prerson';
-import Lonely from './additionalComponents/lonely';
+import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
+import "../../../index.css";
+import Header from "./additionalComponents/header";
+import Person from "./additionalComponents/prerson";
+import Lonely from "./additionalComponents/lonely";
 // import data from './data.json';
 import axios from 'axios'
 import emailjs from 'emailjs-com';
 
 
 const Slider = () => {
-
   const [data, setData] = useState();
   const [people, setPeople] = useState(data);
   const [likedUsers, setLikedUsers] = useState([]);
@@ -21,19 +20,26 @@ const Slider = () => {
   const [gender, setGender] = useState();
   const [age, setAge] = useState();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    const response = await axios.post('http://localhost:5000/api/users/sort', { currentUserId: localStorage.id, breed, gender, age });
+  const handleSubmit = async event => {
+    event.preventDefault();
+    const response = await axios.post("http://localhost:5000/api/users/sort", {
+      currentUserId: localStorage.id,
+      breed,
+      gender,
+      age
+    });
     setData(response.data);
     setPeople(response.data);
-    return <Redirect to='/' />
-  }
+    return <Redirect to="/" />;
+  };
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/api/users', { currentUserId: localStorage.id });
-        console.log(response.data)
+        const response = await axios.post("http://localhost:5000/api/users", {
+          currentUserId: localStorage.id
+        });
+        console.log(response.data);
         setData(response.data);
         setPeople(response.data);
       } catch (e) {
@@ -54,7 +60,7 @@ const Slider = () => {
     const newDislikedUsers = [...dislikedUsers];
 
     switch (action) {
-      case 'ADD_TO_LIKED_USERS':
+      case "ADD_TO_LIKED_USERS":
         if (!people[activeUser].likedUsers.includes(userId)) {
           newPeople[activeUser].likedUsers.push(userId);
           newLikedUsers.push(data[userId]);
@@ -101,25 +107,35 @@ const Slider = () => {
           setPeople(removedPersonFromDataSrc(people, userId));
         }
         break;
-      case 'ADD_TO_DISLIKED_USERS':
+      case "ADD_TO_DISLIKED_USERS":
         if (!people[activeUser].dislikedUsers.includes(userId)) {
           newPeople[activeUser].dislikedUsers.push(userId);
           newDislikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/dislike', { id: userId, currentUserId: localStorage.id }) }
-          response()
+          const response = async () => {
+            await axios.post("http://localhost:5000/api/users/dislike", {
+              id: userId,
+              currentUserId: localStorage.id
+            });
+          };
+          response();
 
           setDislikedUsers(newLikedUsers);
           setPeople(removedPersonFromDataSrc(people, userId));
         }
         break;
-      case 'ADD_TO_SUPERLIKED_USERS':
+      case "ADD_TO_SUPERLIKED_USERS":
         if (!people[activeUser].superLikedUsers.includes(userId)) {
           newPeople[activeUser].superLikedUsers.push(userId);
           newSuperLikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/superlike', { id: userId, currentUserId: localStorage.id }) }
-          response()
+          const response = async () => {
+            await axios.post("http://localhost:5000/api/users/superlike", {
+              id: userId,
+              currentUserId: localStorage.id
+            });
+          };
+          response();
 
           setSuperLikedUsers(newSuperLikedUsers);
           setPeople(removedPersonFromDataSrc(people, userId));
@@ -129,8 +145,8 @@ const Slider = () => {
         return people;
     }
   };
-
   return (
+
     <div className='container'>
       <section className="Announcement-box">
         <h1 className="form-hedline">Отфильтруй собачек</h1>
@@ -267,11 +283,13 @@ const Slider = () => {
 
           </button>
         </NavLink> */}
-
       </section>
 
-      <div className="app">
+      {/* </section>
 
+      <div className="app"> */}
+
+      <div className="app" id="app-1">
 
         {/* {people && people[0] ? (
           <Person
@@ -300,7 +318,6 @@ const Slider = () => {
             //   likedUsers={likedUsers}
             //   superLikedUsers={superLikedUsers}
             // /> */}
-
       </div>
     </div>
   );

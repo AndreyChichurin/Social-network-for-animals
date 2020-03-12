@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './slidercomponent.css';
+import "../../../index.css";
 import Header from './additionalComponents/header';
 import Person from './additionalComponents/prerson';
 import Lonely from './additionalComponents/lonely';
