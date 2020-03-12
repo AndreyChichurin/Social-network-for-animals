@@ -18,6 +18,7 @@ import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 
 const useStyles = makeStyles(theme => ({
+
   root: {
     flexGrow: 1,
   },
@@ -96,11 +97,11 @@ const Navbar = () => {
 
 
 
-          <NavLink to='/login' exact className="navlink" >
+          {/* <NavLink to='/login' exact className="navlink" >
             
               <div className="ButtonNav">Sign In</div>
 
-          </NavLink>
+          </NavLink> */}
 
         </Toolbar>
       </AppBar>

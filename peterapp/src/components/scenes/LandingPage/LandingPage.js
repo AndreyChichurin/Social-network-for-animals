@@ -1,6 +1,7 @@
 import React from "react";
 import '../../../index.css'
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 const LandingPage = () => {
   return (
     <div>
@@ -34,6 +35,11 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="titleHeader-box">
+        <h1 className="titleHeader-absolute">
+          PUG PUG
+        </h1>
+      </div>
+      <div className="titleHeader-box">
         <h1 className="titleHeader">
           Мы подберем для вашего питомцы идеальную пару с которой ему не будет
           скучно.
@@ -41,9 +47,9 @@ const LandingPage = () => {
       </div>
       <div className="button-box">
           <div >
-            <Link to="/login" className="navlink navlink-left" exact>
+            <NavLink to="/login" className="navlink navlink-left" exact>
                 <p className="ButtonNav button-box-item navlink-left">войти</p>
-            </Link>
+            </NavLink>
           </div>
           <Link to="/" className="navlink" exact>
             <p className="ButtonNav button-box-item">регистрация</p>
