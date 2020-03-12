@@ -219,7 +219,7 @@ const AnnouncementForm = () => {
           </div>
           <div className="photo-box">
             <div className="tiii">
-              <img src={image} />
+              <img src={image} alt="img" />
               {/* <p className="hoto-box-text">Загрузить фото</p> */}
             </div>
             <div className="btn-box">

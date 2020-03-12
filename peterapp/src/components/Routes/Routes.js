@@ -12,12 +12,12 @@ import LandingPage from '../scenes/LandingPage/LandingPage';
 export default () => {
   return (
     <Switch>
-      <Route exact path="/" component={Slider} />
+      <Route exact path="/" component={LandingPage} />
       <Route path="/likedby" component={Account} />
       <Route path="/match" component={Match} />
       <Route path="/login" component={Autentification} />
       <Route path="/account" component={AccountEdit} />
-      <Route path="/LandingPage" component={LandingPage} />
+      <Route path="/home" component={Slider} />
     </Switch>
   )
 }

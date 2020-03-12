@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import "../../../index.css";
-import Header from "./additionalComponents/header";
+// import Header from "./additionalComponents/header";
 import Person from "./additionalComponents/prerson";
-import Lonely from "./additionalComponents/lonely";
+// import Lonely from "./additionalComponents/lonely";
 // import data from './data.json';
 import axios from 'axios'
 import emailjs from 'emailjs-com';
+import Navbar from "../Navbar/Navbar";
+
 
 
 const Slider = () => {
@@ -146,8 +148,9 @@ const Slider = () => {
     }
   };
   return (
-
+    
     <div className='container'>
+      <Navbar />
       <section className="Announcement-box">
         <h1 className="form-hedline">Отфильтруй собачек</h1>
         <form className="announcement-form" onSubmit={handleSubmit}>

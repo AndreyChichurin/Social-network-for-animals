@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
-import Logo from './logo'
-import axios from 'axios'
+import React from 'react'
+// import { NavLink } from 'react-router-dom'
+// import Logo from './logo'
+// import axios from 'axios'
 
 const Header = () => {
 
