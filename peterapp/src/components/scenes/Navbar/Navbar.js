@@ -44,8 +44,8 @@ const Navbar = () => {
   return (
 
     <div className={classes.root}>
-      <AppBar className="appBarNav" position="static" color="transparent">
-        <Toolbar>
+      <AppBar position="static" color="transparent" margin-bottom="50">
+        <Toolbar className="appBar">
 
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
             {/* <MenuIcon /> */}

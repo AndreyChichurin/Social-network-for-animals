@@ -18,7 +18,7 @@ const Matchslider = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/api/users/match', {currentUserId:localStorage.id});
+        const response = await axios.post('http://localhost:5000/api/users/match', { currentUserId: localStorage.id });
         console.log(response.data)
         setData(response.data);
         setPeople(response.data);
@@ -45,7 +45,7 @@ const Matchslider = () => {
           newPeople[activeUser].likedUsers.push(userId);
           newLikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/like', {id:userId, currentUserId:localStorage.id}) }
+          const response = async () => { await axios.post('http://localhost:5000/api/users/like', { id: userId, currentUserId: localStorage.id }) }
           response()
 
           setLikedUsers(newLikedUsers);
@@ -57,7 +57,7 @@ const Matchslider = () => {
           newPeople[activeUser].dislikedUsers.push(userId);
           newDislikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/dislike', {id:userId, currentUserId:localStorage.id}) }
+          const response = async () => { await axios.post('http://localhost:5000/api/users/dislike', { id: userId, currentUserId: localStorage.id }) }
           response()
 
           setDislikedUsers(newLikedUsers);
@@ -69,7 +69,7 @@ const Matchslider = () => {
           newPeople[activeUser].superLikedUsers.push(userId);
           newSuperLikedUsers.push(data[userId]);
 
-          const response = async () => { await axios.post('http://localhost:5000/api/users/superlike', {id:userId, currentUserId:localStorage.id}) }
+          const response = async () => { await axios.post('http://localhost:5000/api/users/superlike', { id: userId, currentUserId: localStorage.id }) }
           response()
 
           setSuperLikedUsers(newSuperLikedUsers);
@@ -85,23 +85,27 @@ const Matchslider = () => {
     <div className="app">
       {/* <Header /> */}
 
-      {people && people[0] ? (
-        <Person
-          key={people[0].id}
-          person={people[0]}
-          modifySuperficialChoices={modifySuperficialChoices}
+      {people && people.map(elem => {
+        return <div>
+          <Person
+            key={elem.id}
+            person={elem}
+            modifySuperficialChoices={modifySuperficialChoices}
+            likedUsers={likedUsers}
+          />
+        </div>
+      }
+      )};
+
+      {/* (people &&
+      <div></div>
+      </div><Lonely
+           activeUserImage={people[activeUser].image}
           likedUsers={likedUsers}
+          superLikedUsers={superLikedUsers}
         />
-      ) : <div></div>
-      // (people &&
-      //   // <div></div>
-      //   <Lonely
-      //     activeUserImage={people[activeUser].image}
-      //     likedUsers={likedUsers}
-      //     superLikedUsers={superLikedUsers}
-      //   />
-      //   )
-        }
+        ) */}
+
     </div>
   );
 };

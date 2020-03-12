@@ -27,7 +27,8 @@ export default function MediaCard(animal) {
   // const  { image, color  } = animal;
 
   return (
-    <Card className={classes.root}>
+    <div style={{boxShadow: "1px 3px 1px #9E9E9E"}}>
+      <Card className={classes.root} >
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -56,5 +57,6 @@ export default function MediaCard(animal) {
         </Button>
       </CardActions></Grid>
     </Card>
+      </div>
   );
 }

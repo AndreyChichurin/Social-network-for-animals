@@ -20,7 +20,7 @@ const App = () => {
           <Routes />
         </Router>
       </Provider>
-      <Footer />
+      
     </CurrentUserProvider>
   );
 };

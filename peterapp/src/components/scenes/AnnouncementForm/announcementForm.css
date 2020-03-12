@@ -1,14 +1,16 @@
 .Announcement-box {
+	text-align: left;
 	position: relative;
 	box-sizing: border-box;
 	background-color: #fde5ed;
-	left: 10%;
+
 	top: 1%;
+	margin-top: 20px;
 	padding-left: 30px;
 	padding-right: 25px;
 	padding-bottom: 24px;
 	padding-top: 20px;
-	width: 1000px;
+	width: 355px;
 	border-radius: 5px;
 	z-index: 40;
 }
@@ -153,13 +155,13 @@
 	line-height: 18px;
 	font-weight: 500;
 	color: #ffffff;
-	padding-left: 27px;
-	padding-right: 27px;
+	padding-left: 10px;
+	padding-right: 10px;
 	margin-top: 36px;
 
 	text-align: center;
 	border: none;
-	background-color: rgb(236, 156, 162);
+	background-color: rgb(223, 29, 42);
 
 	border-radius: 25px;
 	height: 36px;
