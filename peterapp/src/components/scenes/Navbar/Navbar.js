@@ -64,6 +64,10 @@ const Navbar = () => {
               <div><p className="ButtonNav">Вас лайкнули</p></div>
             </NavLink>
 
+            <NavLink to="/chatbot" className="navlink">
+            <p className="ButtonNav">Чат Бот</p>
+            </NavLink>
+
        
             </div>
           {/* <span color='green'>
