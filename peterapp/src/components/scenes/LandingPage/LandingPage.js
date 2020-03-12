@@ -41,7 +41,7 @@ const LandingPage = () => {
       </div>
       <div className="button-box">
           <div >
-            <Link to="/" className="navlink navlink-left" exact>
+            <Link to="/login" className="navlink navlink-left" exact>
                 <p className="ButtonNav button-box-item navlink-left">войти</p>
             </Link>
           </div>
