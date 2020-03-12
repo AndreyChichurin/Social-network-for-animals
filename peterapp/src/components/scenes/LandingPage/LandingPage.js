@@ -34,6 +34,11 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="titleHeader-box">
+        <h1 className="titleHeader-absolute">
+          PUG PUG
+        </h1>
+      </div>
+      <div className="titleHeader-box">
         <h1 className="titleHeader">
           Мы подберем для вашего питомцы идеальную пару с которой ему не будет
           скучно.
