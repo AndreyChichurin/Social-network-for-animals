@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Chat from './chat'
+// import React, { useState, useEffect } from 'react';
+// import Chat from './chat'
 
 
-function StartChat (props){
+// function StartChat (props){
   
 
 
-  return (
-    <button >Send</button>
-  )
+//   return (
+//     <button >Send</button>
+//   )
 
-}
+// }
