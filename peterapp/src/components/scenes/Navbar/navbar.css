@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase|Poiret+One|Press+Start+2P|Rubik+Mono+One&display=swap');
+
 .ButtonNav {
   color: #ff0062;
   font-size: 42px;
@@ -10,4 +11,7 @@
 .navlink {
   text-decoration: none;
 }
-.ButtonNav :hover {text-shadow: 0px 2px 0px rgb(0, 255, 251)};
+
+.ButtonNav :hover {
+  text-shadow: 0px 2px 0px rgb(0, 255, 251)
+}
