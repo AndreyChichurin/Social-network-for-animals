@@ -81,7 +81,7 @@ const Autentication = props => {
   const classes = useStyles();
 
   if (isSuccessfulSubmit) {
-    return <Redirect to='/' />
+    return <Redirect to='/home' />
   }
 
   return (

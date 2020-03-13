@@ -4,11 +4,12 @@ import { database } from '../../firebase/index';
 
 function Chat(props) {
   const [cookies] = useCookies(['userName', 'userNickname']);
-  const [nickname, setNickname] = useState('');
+  // const [nickname, setNickname] = useState('');
   const [msg, setMsg] = useState('');
   const [messages, setMessages] = useState({});
+  
   const sender = props.sender;
-  const sender2 = props.sender;
+  // const sender2 = props.sender;
   
   
   const [chat, setChat] = useState(null);
@@ -61,7 +62,7 @@ function Chat(props) {
             </div>
             <div>
             <input placeholder="write here" onChange={handleMsgChange} value={msg} /><br />
-            <button onClick={handleKeyDown}>Send</button>
+            <button class="button button-outline" onClick={handleKeyDown}>Send</button>
             </div>
           </div>
     </div>

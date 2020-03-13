@@ -1,18 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './Navbar.css'
+import './navbar.css'
 
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 // import LoginButton from "./LoginButton"
 // import LogoutButton from "./LogoutButton"
-import HomeIcon from '@material-ui/icons/Home';
-import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
-import ChatIcon from '@material-ui/icons/Chat';
-import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+// import HomeIcon from '@material-ui/icons/Home';
+// import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+// import ChatIcon from '@material-ui/icons/Chat';
+// import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 
 
@@ -52,20 +52,22 @@ const Navbar = () => {
           </IconButton>
 
             <div className="ButtonNav">
-            <NavLink to="/" className="navlink" exact >
-             <p className="ButtonNav">Главная</p>
-
-            </NavLink>
-            
+              <NavLink to="/home" className="navlink" exact >
+              <p className="ButtonNav">Главная</p>
+              </NavLink>
             </div>
             <div className="ButtonNav">
-         
-            <NavLink to="/likedby" className="navlink" >
-              <div><p className="ButtonNav">Вас лайкнули</p></div>
+              <NavLink to="/likedby" className="navlink" >
+              <p className="ButtonNav">Вас лайкнули</p>
             </NavLink>
-
-       
             </div>
+            <div className="ButtonNav">
+              <NavLink to="/chatbot" className="navlink">
+              <p className="ButtonNav">Чат Бот</p>
+              </NavLink>
+            </div>
+
+
           {/* <span color='green'>
           <Button variant="contained" color="inherit" href='/logout'>
             EXIT
