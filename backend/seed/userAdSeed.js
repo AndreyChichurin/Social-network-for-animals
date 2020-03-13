@@ -6,22 +6,23 @@ mongoose.connect("mongodb+srv://admin:kAFZlQ6c9T6OK1m0@cluster0-nx2df.mongodb.ne
     useUnifiedTopology: true
 });
 
-const userAdd = [{
-  "id": "5",
-  "name": 'Мартин',
-  "desc": 'Симпотичный Cat ищет суку',
-  "age": 2,
-  "image": "https://firebasestorage.googleapis.com/v0/b/meowyao-6468e.appspot.com/o/images%2Fcat124.jpeg?alt=media&token=1f94a078-b781-4572-9fbf-9e2ffd66e6b3",
-  "likedUsers": [],
-  "superLikedUsers": [],
-  "dislikedUsers": [],
-  "likedBy": [ '1', '2', '3', '4' ],
-  "email": '9632779@gmail.com',
-  "password": '123',
-  "gender": "men",
-  "phone": "89775632746",
-  "breed": "Аляскинский маламут",
-},
+const userAdd = [
+  {
+    "id": "5",
+    "name": 'Мартин',
+    "desc": 'Симпотичный Cat ищет суку',
+    "age": 3,
+    "image": "https://firebasestorage.googleapis.com/v0/b/meowyao-6468e.appspot.com/o/images%2Fcat124.jpeg?alt=media&token=1f94a078-b781-4572-9fbf-9e2ffd66e6b3",
+    "likedUsers": [],
+    "superLikedUsers": [],
+    "dislikedUsers": [],
+    "likedBy": [1,2,3,4],
+    "email": '9632779@gmail.com',
+    "password": '123',
+    "gender": "men",
+    "phone": "89775632746",
+    "breed": "Аляскинский маламут",
+  },
 {
   "id": "1",
   "name": 'Алиса',

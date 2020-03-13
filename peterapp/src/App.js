@@ -11,6 +11,7 @@ import { CurrentUserProvider } from "./contexts/currentUser";
 import Footer from "./components/scenes/Footer/Footer.js";
 // import CurrentUserChecker from './components/currentUserChecker';
 import Chat from './components/chat/chat'
+import ImageUploader from "../src/firebase/imageuploader"
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Navbar />
-          {/* <Chat /> */}
+          <ImageUploader />
           <Routes />
         </Router>
       </Provider>

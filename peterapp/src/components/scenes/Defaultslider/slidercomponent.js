@@ -312,7 +312,7 @@ const Slider = () => {
             />
           </div>
         }
-        )};
+        )}
             {/* // <Lonely
             //   activeUserImage={people[activeUser].image}
             //   likedUsers={likedUsers}
