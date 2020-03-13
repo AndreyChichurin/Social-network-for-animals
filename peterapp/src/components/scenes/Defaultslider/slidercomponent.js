@@ -148,12 +148,12 @@ const Slider = () => {
     }
   };
   return (
-    
-    <div className='container'>
+    <div>
       <Navbar />
+      <div className='container'>
       <section className="Announcement-box">
-        <h1 className="form-hedline">Отфильтруй собачек</h1>
         <form className="announcement-form" onSubmit={handleSubmit}>
+        <h1 className="form-hedline">Отфильтруй собачек</h1>
           <div className="loh">
             <div className="loh3">
               <div className="announcement-position">
@@ -273,12 +273,12 @@ const Slider = () => {
                   </select>
                 </label>
               </fieldset>
-            </div>
-          </div>
-          <div className="btn-box">
+              <div className="btn-box">
             <button className="form-button" type="submit">
               Отправить
             </button>
+          </div>
+            </div>
           </div>
         </form>
         {/* <NavLink to="/account" className="navlink">
@@ -315,13 +315,14 @@ const Slider = () => {
             />
           </div>
         }
-        )};
+        )}
             {/* // <Lonely
             //   activeUserImage={people[activeUser].image}
             //   likedUsers={likedUsers}
             //   superLikedUsers={superLikedUsers}
             // /> */}
       </div>
+    </div>
     </div>
   );
 };
