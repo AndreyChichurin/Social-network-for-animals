@@ -74,7 +74,7 @@ const Likedbyslider = () => {
               from_phone: from_phone
             };
 
-            emailjs.send('gmail', 'template_goX4oFEZ_clone', templateParams, 'user_0LeiddUf0NMApZ9zocbkH')
+            emailjs.send('PugPugTeam', 'template_goX4oFEZ_clone', templateParams, 'user_0LeiddUf0NMApZ9zocbkH')
               .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
               }, function (error) {

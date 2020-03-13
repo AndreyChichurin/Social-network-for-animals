@@ -28,5 +28,5 @@ const Person = ({ person , modifySuperficialChoices}) => {
   )
 }
 
-export default Person ; 
+export default Person  
 // img src="misc/like.png"
