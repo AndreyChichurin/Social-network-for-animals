@@ -121,7 +121,8 @@ const Likedbyslider = () => {
   };
 
   return (
-    <div className="app">
+    <div className="app app-1">
+      
       {/* <Header /> */}
       {people && people.map(elem => {
           return <div>
