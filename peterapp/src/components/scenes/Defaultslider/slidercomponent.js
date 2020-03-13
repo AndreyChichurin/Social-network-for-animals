@@ -91,7 +91,7 @@ const Slider = () => {
               from_age: from_age
             };
 
-            emailjs.send('gmail', 'template_goX4oFEZ', templateParams, 'user_0LeiddUf0NMApZ9zocbkH')
+            emailjs.send('PugPugTeam', 'template_goX4oFEZ', templateParams, 'user_0LeiddUf0NMApZ9zocbkH')
               .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
               }, function (error) {

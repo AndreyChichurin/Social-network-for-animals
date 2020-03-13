@@ -15,7 +15,7 @@ const userAdd = [{
   "likedUsers": [],
   "superLikedUsers": [],
   "dislikedUsers": [],
-  "likedBy": [ '1', '2', '3', '4' ],
+  "likedBy": [ '1', '2', '3', '4', '6', '7', '8' ],
   "email": '9632779@gmail.com',
   "password": '123',
   "gender": "men",

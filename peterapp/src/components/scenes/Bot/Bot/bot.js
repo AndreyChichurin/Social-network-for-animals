@@ -1,6 +1,7 @@
 import React, { Component } from 'react' ;
 import { connect } from 'react-redux';
 import { sendMessage } from './chat';
+import Navbar from "../../Navbar/Navbar";
 
 
 // const Bot = props => {
@@ -19,10 +20,12 @@ import { sendMessage } from './chat';
 
 class Bot extends Component {
   render() {
+    
     const {feed, sendMessage} = this.props;
     console.log(feed)
     return (
       <div className="chatbot">
+        <Navbar />
     <div >
       <h1>Привет, я чат бот</h1>
       <ul>
