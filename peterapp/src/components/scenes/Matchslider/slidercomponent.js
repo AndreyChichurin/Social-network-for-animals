@@ -103,7 +103,7 @@ const Matchslider = (props) => {
       
         </div>
       }
-      )};
+      )}
 
       {/* (people &&
       <div></div>

@@ -8,7 +8,7 @@ router.post('/', async function (req, res, next) {
     {
       $and: [
         { id: { $ne: req.body.currentUserId } },
-        { likedBy: { $nin: [`${req.body.currentUserId}`] } },
+        { likedUsers: { $nin: [`${req.body.currentUserId}`] } },
         { dislikedUsers: { $nin: [`${req.body.currentUserId}`] } }
       ]
     })
