@@ -11,7 +11,7 @@
 
 Состав команды:
 
-* [Андрей Чичулин](https://github.com/AndreyChichurin)
+* [Андрей Чичурин](https://github.com/AndreyChichurin)
 * [Станислав Мьягчило](https://github.com/miagchilo) 
 * [Максим Байкевич](https://github.com/maxbaikevich)
 * [Александр Гошадзе](https://github.com/algoshadze)
